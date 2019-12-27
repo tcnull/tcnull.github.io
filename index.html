@@ -362,43 +362,43 @@
 <tbody>
 <tr>
 <td style="text-align:center">头文件</td>
-<td>类型</td>
+<td style="text-align:center">类型</td>
 </tr>
 <tr>
 <td style="text-align:center">iostream</td>
-<td>istream, wistream 从流中读取数据</td>
+<td style="text-align:center">istream, wistream 从流中读取数据</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
-<td>ostream, wostream 向流中写入数据</td>
+<td style="text-align:center">ostream, wostream 向流中写入数据</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
-<td>iostream, wiostream 读写流</td>
+<td style="text-align:center">iostream, wiostream 读写流</td>
 </tr>
 <tr>
 <td style="text-align:center">fstream</td>
-<td>ifstream, wifstream 从文件读取数据</td>
+<td style="text-align:center">ifstream, wifstream 从文件读取数据</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
-<td>ofstream, wofstrkeam 向文件写数据</td>
+<td style="text-align:center">ofstream, wofstrkeam 向文件写数据</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
-<td>fstream, wfstream 读写文件</td>
+<td style="text-align:center">fstream, wfstream 读写文件</td>
 </tr>
 <tr>
 <td style="text-align:center">sstream</td>
-<td>istringstream, wistringstream 从string中读取数据</td>
+<td style="text-align:center">istringstream, wistringstream 从string中读取数据</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
-<td>ostringstream, wostringstream 向string中写入数据</td>
+<td style="text-align:center">ostringstream, wostringstream 向string中写入数据</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
-<td>tringstream, wstringstream 读写string</td>
+<td style="text-align:center">tringstream, wstringstream 读写string</td>
 </tr>
 </tbody>
 </table>
@@ -406,7 +406,7 @@
 <p>&emsp;&emsp;iostream定义了用于读写流的基本类型，fstream定义了读写命名文件的类型， sstream定义了读写内存的类型<br>宽字符版本的类型和函数都以一个w开始。宽字符版本的类型和对象与其对应的普通char版本的类型定义在同一个头文件中。<br><strong>IO类型间的关系</strong><br>&emsp;&emsp;类型ifstream和istringstream都继承自istream。因此，可以像使用istream一样使用ifstream和istringstream。<br>同样，类型ofstream和ostringstream都继承自istream。</p>
 <h3 id="IO对象无拷贝或者赋值"><a href="#IO对象无拷贝或者赋值" class="headerlink" title="IO对象无拷贝或者赋值"></a>IO对象无拷贝或者赋值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ofstream out1, out2;</span><br><span class="line">out1 = out2;                //错误，不能对IO对象赋值</span><br><span class="line">ofstream print(ofstream);   //错误，不能初始化ofstream对象</span><br><span class="line">out2 = print(out1);         //错误，不能拷贝流对象</span><br></pre></td></tr></table></figure>
 <p>&emsp;&emsp;由于不能拷贝IO对象，因此我们也不能将形参或者返回类型设置为流类型。进行IO操作的函数通常以引用方式传递和返回流。<br>读写一个IO对象会改变其状态，因此传递和返回的引用不能时const的。</p>
-<h3 id="条件状态"><a href="#条件状态" class="headerlink" title="条件状态"></a>条件状态</h3><p>表2 IO库条件状态<br>|————————————————|<br>|strm::iostate | strm是一种IO类型，如表1列出。iostate是一种机器相关类型，提供了表达状态条件的完整功能。|<br>|strm::badbit  | 指出流已经崩溃|<br>|strm::failbit | 指出一个IO操作失败|<br>|strm::eofbit  | 指出流已经到达文件结束|<br>|strm::goodbit | 指出流未处于错误状态。此值保证为0|<br>|————————————————-|<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int ival;</span><br><span class="line">cin &gt;&gt; ival;</span><br></pre></td></tr></table></figure></p>
+<h3 id="条件状态"><a href="#条件状态" class="headerlink" title="条件状态"></a>条件状态</h3><p>表2 IO库条件状态<br>|:——————-:|:———————:|<br>|strm::iostate | strm是一种IO类型，如表1列出。iostate是一种机器相关类型，提供了表达状态条件的完整功能。|<br>|strm::badbit  | 指出流已经崩溃|<br>|strm::failbit | 指出一个IO操作失败|<br>|strm::eofbit  | 指出流已经到达文件结束|<br>|strm::goodbit | 指出流未处于错误状态。此值保证为0|<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int ival;</span><br><span class="line">cin &gt;&gt; ival;</span><br></pre></td></tr></table></figure></p>
 <p>如果键入Boo，则会报错，cin进入错误状态，输入一个文件结束符号标识，同样会报错；<br>由于流可能出现错误状态，因此在使用一个流之前要注意检查流的状态，例如直接使用一个条件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">while(cin &gt;&gt; word)</span><br><span class="line">    //......</span><br></pre></td></tr></table></figure></p>
 <p><strong>检查流的状态</strong><br>badbit:表示系统级错误，如不可恢复的错误，一旦badbit被置位，流就无法使用;<br>failbit:当发生可恢复错误时被置位，例如期望读取一个数值却读取到一个字符，这种情况流还可以被修正后继续使用；<br>当流到达文件结束的位置，eofbit和failbit都被置位。good位为0，表示未发生错误。<br><strong>管理流对象</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">auto old_state = cin.rdstate(); //记住cin的状态</span><br><span class="line">cin.clear();                    //clear不接收任何参数时，清楚所有错误标志位，使cin有效</span><br><span class="line">process_input(cin);             //使用cin</span><br><span class="line">cin.setstate(old_state);        //将cin设置为原有状态</span><br></pre></td></tr></table></figure></p>
 <p>带参数的clear()可以接受一个iostate值，表示流的新状态</p>
