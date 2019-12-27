@@ -82,9 +82,9 @@
         <category>深度学习</category>
       </categories>
       <tags>
+        <tag>人脸检测</tag>
         <tag>MTCNN</tag>
         <tag>Facenet</tag>
-        <tag>人脸检测</tag>
         <tag>人脸识别</tag>
       </tags>
   </entry>
@@ -96,10 +96,10 @@
         <category>深度学习</category>
       </categories>
       <tags>
-        <tag>MTCNN</tag>
-        <tag>人脸检测</tag>
         <tag>卷积神经网络</tag>
+        <tag>人脸检测</tag>
         <tag>人脸对齐</tag>
+        <tag>MTCNN</tag>
       </tags>
   </entry>
   <entry>
