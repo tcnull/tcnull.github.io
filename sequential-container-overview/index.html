@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="顺序容器,">
 
 
 
@@ -79,14 +79,18 @@
 
 
 
-<meta name="keywords" content="hexo, 神经网络, CNN, RNN, 深度学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TC CODE HOME">
-<meta property="og:url" content="http://tcnull.github.io/tags/激活函数/index.html">
+<meta name="description" content="表1 顺序容器的类型     vector 可变大小的数组. 支持文件快速随机访问. 在尾部之外的位置插入和删除元素的速度可能很慢     deque 双端队列. 支持快速随机访问. 在头尾插入和删除元素的速度很快.   list 双向链表. 只支持双向顺序访问. 在list中任何位置插入和删除元素的操作都很快   forward_list 单向链表. 只支持单向顺序访问. 在链表任何位置进行插入">
+<meta name="keywords" content="顺序容器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sequential_container_overview">
+<meta property="og:url" content="http://tcnull.github.io/sequential-container-overview/index.html">
 <meta property="og:site_name" content="TC CODE HOME">
+<meta property="og:description" content="表1 顺序容器的类型     vector 可变大小的数组. 支持文件快速随机访问. 在尾部之外的位置插入和删除元素的速度可能很慢     deque 双端队列. 支持快速随机访问. 在头尾插入和删除元素的速度很快.   list 双向链表. 只支持双向顺序访问. 在list中任何位置插入和删除元素的操作都很快   forward_list 单向链表. 只支持单向顺序访问. 在链表任何位置进行插入">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-12-29T02:33:58.401Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TC CODE HOME">
+<meta name="twitter:title" content="sequential_container_overview">
+<meta name="twitter:description" content="表1 顺序容器的类型     vector 可变大小的数组. 支持文件快速随机访问. 在尾部之外的位置插入和删除元素的速度可能很慢     deque 双端队列. 支持快速随机访问. 在头尾插入和删除元素的速度很快.   list 双向链表. 只支持双向顺序访问. 在list中任何位置插入和删除元素的操作都很快   forward_list 单向链表. 只支持单向顺序访问. 在链表任何位置进行插入">
 
 
 
@@ -116,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://tcnull.github.io/tags/激活函数/">
+  <link rel="canonical" href="http://tcnull.github.io/sequential-container-overview/">
 
 
 
 
 
-  <title>Tag: 激活函数 | TC CODE HOME</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>sequential_container_overview | TC CODE HOME</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -141,7 +145,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"><a href="https://github.com/tcnull" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a></div>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -256,52 +260,270 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>激活函数<small>Tag</small>
-        </h1>
-      </div>
+  
+
+  
+  
+  
+  
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tcnull.github.io/sequential-container-overview/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TomCat代码小屋">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/qrcode_for_gh_bf75e8c4c4cd_344.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TC CODE HOME">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">sequential_container_overview</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-29T10:33:02+08:00">
+                2019-12-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/sequential-container-overview/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/sequential-container-overview/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/fromNeuronToCNNRNNAndDeepLearning/" itemprop="url">
-              
-                <span itemprop="name">从神经元到神经网络</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-14T00:00:00+08:00" content="2019-04-14">
-          04-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <p>表1 顺序容器的类型</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">vector</th>
+<th style="text-align:center">可变大小的数组. 支持文件快速随机访问. 在尾部之外的位置插入和删除元素的速度可能很慢</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">deque</td>
+<td style="text-align:center">双端队列. 支持快速随机访问. 在头尾插入和删除元素的速度很快.</td>
+</tr>
+<tr>
+<td style="text-align:center">list</td>
+<td style="text-align:center">双向链表. 只支持双向顺序访问. 在list中任何位置插入和删除元素的操作都很快</td>
+</tr>
+<tr>
+<td style="text-align:center">forward_list</td>
+<td style="text-align:center">单向链表. 只支持单向顺序访问. 在链表任何位置进行插入和删除的操作都很快</td>
+</tr>
+<tr>
+<td style="text-align:center">array</td>
+<td style="text-align:center">固定大小的数组. 支持快速随机访问, 不能添加和删除元素</td>
+</tr>
+<tr>
+<td style="text-align:center">string</td>
+<td style="text-align:center">与vector相似的容器, 但专门用于保存字符. 随机快速访问速度快. 在尾部插入和删除的速度快</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&emsp;&emsp;string和vector将元素保存在连续的内存空间中. 由于元素是连续存储的, 由元素的下标在来计算元素的地址非常快速. 但是在这两种容器中间插入和删除元素会非常耗时. 因为一次插入和删除操作之后, 需要移动插入/删除位置之后的所有元素, 来保持连续存储. 另外, 在添加一个元素时, 有时还可能需要额外分配内存, 这是可能需要将所有的元素移动到新的内存空间中.<br>&emsp;&emsp;list和forward_list两个容器的设计目的是令容器的插入删除操作都很快. 但是, 作为代价, 它们不支持随机访问. 并且由于这两个容器需要额外的指针域, 因此与vector, deque, array相比, 内存利用率较低.<br>&emsp;&emsp;deque是一种更加复杂的数据结构. 与string和vector类似, deque支持快速随机访问. 与string和vector一样, 在deque的中间位置添加/删除元素代价(可能)很高, 但是在两端进行插入和删除都是很快的, 速度与lisy和forward_lis添加和删除元素速度相当.</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/顺序容器/" rel="tag"># 顺序容器</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/file-IO/" rel="next" title="文件输入输出">
+                <i class="fa fa-chevron-left"></i> 文件输入输出
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -309,6 +531,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -554,6 +783,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -975,26 +1208,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

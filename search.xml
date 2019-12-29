@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[sequential_container_overview]]></title>
+    <url>%2Fsequential-container-overview%2F</url>
+    <content type="text"><![CDATA[表1 顺序容器的类型 vector 可变大小的数组. 支持文件快速随机访问. 在尾部之外的位置插入和删除元素的速度可能很慢 deque 双端队列. 支持快速随机访问. 在头尾插入和删除元素的速度很快. list 双向链表. 只支持双向顺序访问. 在list中任何位置插入和删除元素的操作都很快 forward_list 单向链表. 只支持单向顺序访问. 在链表任何位置进行插入和删除的操作都很快 array 固定大小的数组. 支持快速随机访问, 不能添加和删除元素 string 与vector相似的容器, 但专门用于保存字符. 随机快速访问速度快. 在尾部插入和删除的速度快 &emsp;&emsp;string和vector将元素保存在连续的内存空间中. 由于元素是连续存储的, 由元素的下标在来计算元素的地址非常快速. 但是在这两种容器中间插入和删除元素会非常耗时. 因为一次插入和删除操作之后, 需要移动插入/删除位置之后的所有元素, 来保持连续存储. 另外, 在添加一个元素时, 有时还可能需要额外分配内存, 这是可能需要将所有的元素移动到新的内存空间中.&emsp;&emsp;list和forward_list两个容器的设计目的是令容器的插入删除操作都很快. 但是, 作为代价, 它们不支持随机访问. 并且由于这两个容器需要额外的指针域, 因此与vector, deque, array相比, 内存利用率较低.&emsp;&emsp;deque是一种更加复杂的数据结构. 与string和vector类似, deque支持快速随机访问. 与string和vector一样, 在deque的中间位置添加/删除元素代价(可能)很高, 但是在两端进行插入和删除都是很快的, 速度与lisy和forward_lis添加和删除元素速度相当.]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>顺序容器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[文件输入输出]]></title>
     <url>%2Ffile-IO%2F</url>
     <content type="text"><![CDATA[&emsp;&emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作|fstream strm;|创建一个未绑定的文件流。fstream是头文件中定义的一个类型||:—————-:|:—————————————————————————:||fstream fstrm(s);|创建一个fstream，并打开名为s的文件。s可以是string类型，或者是一个指向C风格字符串类型的指针。这些构造函数都是explicit的。默认的文件模式依赖于fstream的模式。||fstream fstrm(s, mode);|与前一个构造函数类似，都是以mode模式打开文件||fstrm.open(s)|打开一个名为s的文件，并与fstrm绑定。s可以是一个string或者一个指向C风格字符串的指针。默认的文件模式依赖于fstream的类型||fstrm.close()|关闭与fstrm绑定的文件。返回void||fstrm。is_open()|返回一个bool值，指出与fstrm关联的文件是否成功打开且未关闭| 使用文件流对象&emsp;&emsp;每个文件流类都定义了一个open成员函数. 在创建文件流对象时, 可以直接提供文件名(可选), 当提供了文件名时, 会自动调用open().12ifstream in(ifile); //构造一个ifstream类型的流对象并打开文件ofstream out; //构造一个输出文件流, 但是未与任何文件关联 &emsp;&emsp;在新的C++标准中, 文件名可以是库类型string对象, 也可以是C风格字符数组. 旧版本的标准库只允许是C风格字符数组.用fstream代替iostream&amp; 成员函数open和close123ifstream in(ifile);ofstream out;out.open(ifile + &quot;.copy&quot;); //打开指定文件 &emsp;&emsp;如果调用open失败. failbit会被置位. 因为调用open可能会失败, 因此需要养成进程检验open成功与否的好习惯.1if(out) &emsp;&emsp;一旦一个文件流打开了, 它就保持与文件的关联. 如果再对一个已经打开的文件流调用open将会失败, 并会导致failbit被置位. 为了将文件流关联到另外一个文件,必须先关闭已经关联的文件流. 自动构造和析构&emsp;&emsp;考虑这样一个程序：1234567for(auto p = argc + 1; p != argv + argc; ++p)&#123; ifstream input(*p) //创建输入流并打开文件 if(input) process(input); else cerr &lt;&lt; &quot;couldn&apos;t open: &quot; + string(*p);&#125; &emsp;&emsp;这样，每一个循环都会构造一个新的名为input的ifstream对象, 并打开它来读取对应文件. 但是由于input是while的局部变量, 因此在每一次循环都会创建和销毁一次. 当一个fstream离开其作用域时, 与之关联的文件会自动关闭. 在下一步循环中, input会被自动创建. 当一个fstream被销毁时, close会自动被调用 文件模式]]></content>
@@ -97,9 +108,9 @@
         <category>深度学习</category>
       </categories>
       <tags>
-        <tag>人脸检测</tag>
         <tag>MTCNN</tag>
         <tag>Facenet</tag>
+        <tag>人脸检测</tag>
         <tag>人脸识别</tag>
       </tags>
   </entry>
@@ -111,10 +122,10 @@
         <category>深度学习</category>
       </categories>
       <tags>
-        <tag>卷积神经网络</tag>
-        <tag>人脸检测</tag>
-        <tag>人脸对齐</tag>
         <tag>MTCNN</tag>
+        <tag>人脸检测</tag>
+        <tag>卷积神经网络</tag>
+        <tag>人脸对齐</tag>
       </tags>
   </entry>
   <entry>
