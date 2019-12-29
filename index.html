@@ -271,6 +271,165 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tcnull.github.io/file-IO/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TomCat代码小屋">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/qrcode_for_gh_bf75e8c4c4cd_344.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TC CODE HOME">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/file-IO/" itemprop="url">文件输入输出</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-29T09:34:23+08:00">
+                2019-12-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/file-IO/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/file-IO/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>&emsp;&emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。</p>
+<p>表1：fstream特有操作<br>|fstream strm;|创建一个未绑定的文件流。fstream是头文件中定义的一个类型|<br>|:—————-:|:—————————————————————————:|<br>|fstream fstrm(s);|创建一个fstream，并打开名为s的文件。s可以是string类型，或者是一个指向C风格字符串类型的指针。这些构造函数都是explicit的。默认的文件模式依赖于fstream的模式。|<br>|fstream fstrm(s, mode);|与前一个构造函数类似，都是以mode模式打开文件|<br>|fstrm.open(s)|打开一个名为s的文件，并与fstrm绑定。s可以是一个string或者一个指向C风格字符串的指针。默认的文件模式依赖于fstream的类型|<br>|fstrm.close()|关闭与fstrm绑定的文件。返回void|<br>|fstrm。is_open()|返回一个bool值，指出与fstrm关联的文件是否成功打开且未关闭|</p>
+<h3 id="使用文件流对象"><a href="#使用文件流对象" class="headerlink" title="使用文件流对象"></a>使用文件流对象</h3><p>&emsp;&emsp;每个文件流类都定义了一个open成员函数. 在创建文件流对象时, 可以直接提供文件名(可选), 当提供了文件名时, 会自动调用open().<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifstream in(ifile); //构造一个ifstream类型的流对象并打开文件</span><br><span class="line">ofstream out;       //构造一个输出文件流, 但是未与任何文件关联</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;在新的C++标准中, 文件名可以是库类型string对象, 也可以是C风格字符数组. 旧版本的标准库只允许是C风格字符数组.<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/file-IO/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+  
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://tcnull.github.io/CPP-io-library/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -312,6 +471,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1704,162 +1885,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-  
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="TomCat代码小屋">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/qrcode_for_gh_bf75e8c4c4cd_344.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TC CODE HOME">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/fromNeuronToCNNRNNAndDeepLearning/" itemprop="url">从神经元到神经网络</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-14T00:00:00+08:00">
-                2019-04-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/神经网络/" itemprop="url" rel="index">
-                    <span itemprop="name">神经网络</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/fromNeuronToCNNRNNAndDeepLearning/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/fromNeuronToCNNRNNAndDeepLearning/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          神经网络（neural networks)方面的研究很早就已经出现，今天神经网络已经出现了很多种类，比如CNN(Convolution Neural Network), RNN(Recurrent Neural Network)等等。下面将从模型神经元逐步深入到神经网络，再到如今流行的卷积神经网络，循环神经网络；还将介绍一些常见的激活函数，如：阶跃函数，Sigmoid函数， tanh函数， ReLU函数。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/fromNeuronToCNNRNNAndDeepLearning/">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1912,7 +1937,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1923,7 +1948,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1934,7 +1959,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

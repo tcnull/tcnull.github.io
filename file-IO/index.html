@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="深度学习,YOLO,目标检测,">
+  <meta name="keywords" content="文件流,读写文件,">
 
 
 
@@ -79,25 +79,18 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;我们可以一眼识别出图片里面的目标和目标的位置以及目标的动作等信息。我们的视觉系统快速且准确，可以让我们几乎不用思考就可以识别复杂的目标。用于物体检测的快速，准确的算法将允许计算机在没有专用传感器的情况下驾驶汽车，使得辅助设备能够实时传送 场景信息给人类用户，并可以用于通用的响应式机器人系统。快速准确的目标检测算法的研究一直没有停下来。 &amp;emsp;&amp;emsp;目前比较流行的">
-<meta name="keywords" content="深度学习,YOLO,目标检测">
+<meta name="description" content="&amp;emsp;&amp;emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作|fstream strm;|创建一个未绑定的文件流。fstream是头文件中定义的一个类型||:—————-:|:—————————————————————————:||fst">
+<meta name="keywords" content="文件流,读写文件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="YOLO实时目标检测">
-<meta property="og:url" content="http://tcnull.github.io/yolo-real-time-object-detection/index.html">
+<meta property="og:title" content="文件输入输出">
+<meta property="og:url" content="http://tcnull.github.io/file-IO/index.html">
 <meta property="og:site_name" content="TC CODE HOME">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;我们可以一眼识别出图片里面的目标和目标的位置以及目标的动作等信息。我们的视觉系统快速且准确，可以让我们几乎不用思考就可以识别复杂的目标。用于物体检测的快速，准确的算法将允许计算机在没有专用传感器的情况下驾驶汽车，使得辅助设备能够实时传送 场景信息给人类用户，并可以用于通用的响应式机器人系统。快速准确的目标检测算法的研究一直没有停下来。 &amp;emsp;&amp;emsp;目前比较流行的">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作|fstream strm;|创建一个未绑定的文件流。fstream是头文件中定义的一个类型||:—————-:|:—————————————————————————:||fst">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://tcnull.github.io/yolo-real-time-object-detection/C4W3-11_1.png">
-<meta property="og:image" content="http://tcnull.github.io/yolo-real-time-object-detection/C4W3-12_1.png">
-<meta property="og:image" content="http://tcnull.github.io/yolo-real-time-object-detection/figure_1.jpg">
-<meta property="og:image" content="http://tcnull.github.io/yolo-real-time-object-detection/grid.jpg">
-<meta property="og:image" content="http://tcnull.github.io/yolo-real-time-object-detection/yolo_model.jpg">
-<meta property="og:image" content="http://tcnull.github.io/yolo-real-time-object-detection/yolo_loss_function.jpg">
-<meta property="og:updated_time" content="2019-05-22T13:00:51.082Z">
+<meta property="og:updated_time" content="2019-12-29T01:53:40.060Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YOLO实时目标检测">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;我们可以一眼识别出图片里面的目标和目标的位置以及目标的动作等信息。我们的视觉系统快速且准确，可以让我们几乎不用思考就可以识别复杂的目标。用于物体检测的快速，准确的算法将允许计算机在没有专用传感器的情况下驾驶汽车，使得辅助设备能够实时传送 场景信息给人类用户，并可以用于通用的响应式机器人系统。快速准确的目标检测算法的研究一直没有停下来。 &amp;emsp;&amp;emsp;目前比较流行的">
-<meta name="twitter:image" content="http://tcnull.github.io/yolo-real-time-object-detection/C4W3-11_1.png">
+<meta name="twitter:title" content="文件输入输出">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作|fstream strm;|创建一个未绑定的文件流。fstream是头文件中定义的一个类型||:—————-:|:—————————————————————————:||fst">
 
 
 
@@ -127,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://tcnull.github.io/yolo-real-time-object-detection/">
+  <link rel="canonical" href="http://tcnull.github.io/file-IO/">
 
 
 
 
 
-  <title>YOLO实时目标检测 | TC CODE HOME</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>文件输入输出 | TC CODE HOME</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -281,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tcnull.github.io/yolo-real-time-object-detection/">
+    <link itemprop="mainEntityOfPage" href="http://tcnull.github.io/file-IO/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TomCat代码小屋">
@@ -298,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">YOLO实时目标检测</h1>
+          <h1 class="post-title" itemprop="name headline">文件输入输出</h1>
         
 
         <div class="post-meta">
@@ -310,8 +303,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-19T22:56:06+08:00">
-                2019-05-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-29T09:34:23+08:00">
+                2019-12-29
               </time>
             
 
@@ -333,8 +326,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/深度学习/" itemprop="url" rel="index">
-                    <span itemprop="name">深度学习</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -351,8 +344,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/yolo-real-time-object-detection/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/yolo-real-time-object-detection/" itemprop="commentCount"></span>
+                <a href="/file-IO/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/file-IO/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -385,40 +378,16 @@
       
 
       
-        <p>&emsp;&emsp;我们可以一眼识别出图片里面的目标和目标的位置以及目标的动作等信息。我们的视觉系统快速且准确，可以让我们几乎不用思考就可以识别复杂的目标。用于物体检测的快速，准确的算法将允许计算机在没有专用传感器的情况下驾驶汽车，使得辅助设备能够实时传送 场景信息给人类用户，并可以用于通用的响应式机器人系统。快速准确的目标检测算法的研究一直没有停下来。</p>
-<p>&emsp;&emsp;目前比较流行的目标检测算法可以分为两类：一类是基于Region Proposal的R-CNN系算法（R-CNN，Fast R-CNN, Faster R-CNN），它们是two-stage的，需要先使用启发式方法（selective search）或者CNN网络（RPN）产生Region Proposal，然后再在Region Proposal上做分类与回归。<br>&emsp;&emsp;另一类是Yolo，SSD这类one-stage算法，其仅仅使用一个CNN网络直接预测不同目标的类别与位置。<br>&emsp;&emsp;第一类方法是准确度高一些，但是速度慢，但是第二类算法是速度快，但是准确性要低一些。</p>
-<p>&emsp;&emsp;下面将要介绍YOLO算法，You Only Look Once: Unified, Real-Time Object Detection。从算法的名字上就可以很容易知道此算法的特点，只需要进行一次CNN运算，Unified指的是这是一个统一的框架，提供end-to-end的预测，而Real-Time则时体现Yolo算法速度快。<br><a id="more"></a><br>&emsp;&emsp;在介绍YOLO算法的原理之前，有必要介绍一下滑动窗口原理。</p>
-<h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2><p>&emsp;&emsp;滑动窗口的思想是将目标检测问题转换为图像分类问题，即使用不同大小和比例的的窗口在整张图片上以一定的步长滑动，在每个窗口对应区域内做分类，逐步完成对整张图片的目标检测。<br>&emsp;&emsp;很容易看出来，这个方法的问题在于无法事先知道待检测目标的的大小和位置，因此需要设置不同大小和比例的滑动窗口去进行滑动，并且需要选取合适的步长。但是此过程会产生很多的子区域，每个子区域都需要利用分类器去做预测，这就需要很大的计算量，检测速度会受到很大的影响。通常，我们又是很关注检测速度的，因此为了保证检测速度，在使用滑动窗口时，模型一般不能太复杂。<br>&emsp;&emsp;在R-CNN中采用了selective search方法寻找最可能包含目标的子区域进行检测，即启发式过滤掉很多可能不含有目标的子区域来提高效率。在使用CNN分类器时，滑动窗口是依然是非常耗时的。为了解决这个问题，提出了全卷积的方法。</p>
-<h2 id="全卷积"><a href="#全卷积" class="headerlink" title="全卷积"></a>全卷积</h2><p>&emsp;&emsp;什么是全卷积（FCN）呢？方法很简单，结合卷积运算的特点，可以利用一种全卷积的方法实现更高效的滑动窗口。全卷积，即使用卷积层代替全连接层。<br>例如下面这个例子，来源于吴恩达老师的网课：</p>
-<p><img src="/yolo-real-time-object-detection/C4W3-11_1.png" width="640" height="480" alt="neural" align="center"></p>
-<p>假设测试图大小是16×16，并令滑动窗口大小是14×14, 滑动步长为2，所以这个测试图可以被窗口划分成4个部分，即输出的维度为[2,2,4]，可以看作4个类别的预测概率值。</p>
-<p><img src="/yolo-real-time-object-detection/C4W3-12_1.png" width="640" height="480" alt="neural" align="center"></p>
-<p>可以很清楚的看出，经过这一次卷积运算就完成了滑动窗口所有子区域的分类预测，其实这就是overfeat算法的思想。这个思想来源于卷积运算的图片空间位置不变的特性，尽管卷积过程中图片大大减小了，但是特征的相对位置依然保持不变。R-CNN也借鉴了这个思想，由此产生了Fast R-CNN算法。<br>看起来以上算法已经很好的解决了滑动窗口计算量大的问题，但是这只是对于一个固定大小，固定步长的窗口，并不能很好的在规模不同的图片在进行不同大小目标的检测。由此，产生了YOLO算法。<br>&emsp;&emsp;[YOLO论文连接]：<a href="https://arxiv.org/abs/1506.02640" target="_blank" rel="noopener">https://arxiv.org/abs/1506.02640</a></p>
-<h2 id="YOLO算法原理"><a href="#YOLO算法原理" class="headerlink" title="YOLO算法原理"></a>YOLO算法原理</h2><p>&emsp;&emsp;YOLO算法直接将原始图片分割成互不重合的小方块，然后通过卷积最后生产这样大小的特征图，基于上面的分析，可以认为特征图的每个元素也是对应原始图片的一个小方块，然后用每个元素来可以预测那些中心点在该小方格内的目标，这就是YOLO算法的朴素思想。</p>
-<h2 id="YOLO设计理念"><a href="#YOLO设计理念" class="headerlink" title="YOLO设计理念"></a>YOLO设计理念</h2><p>&emsp;&emsp;总的来说，YOLO算法采用一个单独的CNN模型实现end-to-end的目标检测，如下图所示：</p>
-<p><img src="/yolo-real-time-object-detection/figure_1.jpg" width="640" height="480" alt="neural" align="center"></p>
-<p>&emsp;&emsp;首先将输入图片resize到448x448，然后送入CNN网络，最后处理网络预测结果得到检测的目标。这个过程相比R-CNN算法，其是一个统一的框架，其速度更快，而且YOLO的训练过程也是end-to-end的。</p>
-<p>&emsp;&emsp;具体来说，YOLO的CNN网络首先将输入的图片分割成 S×S的网格，然后每个单元格负责去检测那些中心点落在该格子内的目标。如下图所示：</p>
-<p><img src="/yolo-real-time-object-detection/grid.jpg" width="640" height="480" alt="neural" align="center"></p>
-<p>&emsp;&emsp;如上图，可以看到狗这个目标的中心落在左下角一个单元格内，因此该单元格负责预测这个狗。每个单元格会预测B个边界框（bounding box）并计算边界框的置信度（confidence score）。这里置信度包含两个方面，一是边界框含有目标的可能性大小，二是边界框的准确度。前者记为Pr(Object)，当该边界框不包含目标时，Pr(object)=0。当该边界框包含目标时，Pr(object)=1。</p>
-<p>&emsp;&emsp;边界框的准确度可以用预测框（predicated box）与实际框（ground truth）的交并比（IOU，intersection over union）来表示，记为$\text{IOU}^{truth}_{pred}$。因此置信度可以定义为$Pr(Object)*\text{IOU}^{truth}_{pred}$。</p>
-<p>&emsp;&emsp;注意论文里面定义的置信度并不是边界框是否含有目标的概率，而是预测边界框的准确度与Pr(object)的乘积。</p>
-<p>&emsp;&emsp;每一个网格单元预测C个类别的概率值，记为：$Pr(Class_i|Object)$。它表示在每个单元格里属于每一个类别的概率。不管有多少个边界框，都仅在每一个单元格上预测一组概率值（这在YOLO后面的版本做了改动）。<br>&emsp;&emsp;现在可以利用条件类别概率与每个单元格置信度的乘积计算出每个每个边界框特定类别的置信度：</p>
-<script type="math/tex; mode=display">
-Pr(Class_i|Object)*Pr(Object)*IOU^{truth}_{pred} = Pr(Class_i)*IOU^{truth}_{pred}</script><p>&emsp;&emsp;边界框类别置信度表示的是该边界框中目标属于各个类别的可能性大小以及边界框匹配目标的好坏。<br>&emsp;&emsp;原论文中利用YOLO计算PASCAL VOC数据集，利用了S=7，B=2。PASCAL VOC数据集一共有20种类别，因此YOLO最终需要预测大小为7×7×30的张量（tensor）。</p>
-<h2 id="网络设计"><a href="#网络设计" class="headerlink" title="网络设计"></a>网络设计</h2><p>&emsp;&emsp;YOLO利用卷积网络来提取特征值，再利用全连接层预测输出概率值和坐标。其网络结构受GoogleNet模型的启发，拥有24各卷积层，之后紧跟两个全连接层。</p>
-<p><img src="/yolo-real-time-object-detection/yolo_model.jpg" width="640" height="480" alt="neural" align="center"></p>
-<p>&emsp;&emsp;在YOLO模型中，对于卷积层，主要使用1x1卷积来做channle reduction，然后紧跟3x3卷积。对于卷积层和全连接层，采用Leaky ReLU激活函数： max(x, 0.1x) 。但是最后一层却采用线性激活函数。<br>&emsp;&emsp;在原论文中，作者还训练了加速版YOLO，用了9个卷积层代替原始的24个卷积层，同时在这些卷积层中采用了更少的卷积核。</p>
-<h2 id="模型的训练"><a href="#模型的训练" class="headerlink" title="模型的训练"></a>模型的训练</h2><p>&emsp;&emsp;正式训练之前，利用了前20个卷积层紧跟一个平均池化层(average-pooling layer)和一个全连接层构成的分类模型在ImageNet数据集上进行了预训练。之后加上4个随机初始化的卷积层和两个随机初始化的全连接层，构成了上图的网络架构。由于检测任务一般需要更高清的图片，所以将网络的输入从224x224增加到了448x448。<br>模型的最后一层预测了类概率和边界框坐标。利用图片的高度和宽度对边界框的坐标进行了归一化处理，使它们的范围介于0-1之间。<br>对边界框的坐标进行了参数化处理，其范围也是(0,1)。</p>
-<p>&emsp;&emsp;Yolo算法将目标检测看成回归问题，所以采用的是均方差损失函数。但是对不同的部分采用了不同的权重值。首先区分定位误差和分类误差。对于定位误差，即边界框坐标预测误差，采用较大的权重$\lambda _{coord}=5$。然后其区分不包含目标的边界框与含有目标的边界框的置信度，对于前者，采用较小的权重值 $\lambda _{noobj}=0.5$。其它权重值均设为1。然后采用均方误差，其同等对待大小不同的边界框，但是实际上较小的边界框的坐标误差应该要比较大的边界框要更敏感。为了保证这一点，将网络的边界框的宽与高预测改为对其平方根的预测，即预测值变为 $(x,y,\sqrt{w}, \sqrt{h})$。</p>
-<p>&emsp;&emsp;另外，YOLO在每个单元格预测多个边界框。但是在训练时，只需要一个边界框预测器负责每一个目标。如果该单元格内确实存在目标，那么只选择与ground truth的IOU最大的那个边界框来负责预测该目标，而其它边界框认为不存在目标。这样设置的一个结果将会使一个单元格对应的边界框更加专业化，其可以分别适用不同大小，不同高宽比的目标，从而提升模型性能。</p>
-<p>但是如果一个单元格内存在多个目标怎么办呢？按照原文的设计，这时候Yolo算法就只能选择其中一个来训练，这也是Yolo算法的缺点之一。</p>
-<p>最终YOLO的损失函数计算如下：</p>
-<p><img src="/yolo-real-time-object-detection/yolo_loss_function.jpg" width="640" height="480" alt="neural" align="center"></p>
-<p>&emsp;&emsp;其中第一项是边界框中心坐标的误差项， $1^{obj}_{ij}$ 指的是第 i 个单元格存在目标，且该单元格中的第 j 个边界框负责预测该目标。第二项是边界框的高与宽的误差项。第三项是包含目标的边界框的置信度误差项。第四项是不包含目标的边界框的置信度误差项。而最后一项是包含目标的单元格的分类误差项， $1^{obj}_{i}$ 指的是第 i 个单元格存在目标。这里特别说一下置信度的target值 C_i ，如果是不存在目标，此时由于 Pr(object)=0，那么 C_i=0 。如果存在目标， Pr(object)=1 ，此时需要确定 $\text{IOU}^{truth}_{pred}$，当然你希望最好的话，可以将IOU取1，这样 C_i=1 ，但是在YOLO实现中，使用了一个控制参数rescore（默认为1），当其为1时，IOU不是设置为1，而就是计算truth和pred之间的真实IOU。</p>
-<h2 id="网络的预测"><a href="#网络的预测" class="headerlink" title="网络的预测"></a>网络的预测</h2><p>&emsp;&emsp;YOLO的预测用到了非极大值抑制算法(non maximum suppression, NMS)，这里对算法的原理做一个简单的介绍，链接：<a href="https://tcnull.github.io/nms/">https://tcnull.github.io/nms/</a></p>
-<p>&emsp;&emsp;了解了NMS算法再来分析YOLO的预测过程，以batch = 1为例，即只预测一张输入图片。<br>&emsp;&emsp;由前面的分析，很容易知道网络的最终输出的张量大小是7×7×30，将其分割成三个部分：类别概率部分为 [7, 7, 20]，置信度部分为 [7,7,2] ，而边界框部分为 [7,7,2,4]。将前两部分相乘（矩阵[7, 7, 20]乘以[7,7,2] 可以各补一个维度来完成 [7,7,1,20]×[7,7,2,1]）可以得到类别置信度值为[7, 7,2,20]，即总共预测了7<em>7</em>2=98个边界框。对于这98个边界框，首先将置信度小于阈值的值置为0，然后分别对置信度值使用NMS，并且这里NMS的处理过程和传统过程不一样。这里不对NMS的结果进行剔除，而是直接将其置信度置为0。最后确定每个边界框的类别，当其置信度不为0时才输出检测结果。</p>
-
+        <p>&emsp;&emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。</p>
+<p>表1：fstream特有操作<br>|fstream strm;|创建一个未绑定的文件流。fstream是头文件中定义的一个类型|<br>|:—————-:|:—————————————————————————:|<br>|fstream fstrm(s);|创建一个fstream，并打开名为s的文件。s可以是string类型，或者是一个指向C风格字符串类型的指针。这些构造函数都是explicit的。默认的文件模式依赖于fstream的模式。|<br>|fstream fstrm(s, mode);|与前一个构造函数类似，都是以mode模式打开文件|<br>|fstrm.open(s)|打开一个名为s的文件，并与fstrm绑定。s可以是一个string或者一个指向C风格字符串的指针。默认的文件模式依赖于fstream的类型|<br>|fstrm.close()|关闭与fstrm绑定的文件。返回void|<br>|fstrm。is_open()|返回一个bool值，指出与fstrm关联的文件是否成功打开且未关闭|</p>
+<h3 id="使用文件流对象"><a href="#使用文件流对象" class="headerlink" title="使用文件流对象"></a>使用文件流对象</h3><p>&emsp;&emsp;每个文件流类都定义了一个open成员函数. 在创建文件流对象时, 可以直接提供文件名(可选), 当提供了文件名时, 会自动调用open().<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifstream in(ifile); //构造一个ifstream类型的流对象并打开文件</span><br><span class="line">ofstream out;       //构造一个输出文件流, 但是未与任何文件关联</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;在新的C++标准中, 文件名可以是库类型string对象, 也可以是C风格字符数组. 旧版本的标准库只允许是C风格字符数组.<br><a id="more"></a><br><strong>用fstream代替iostream&amp;</strong></p>
+<p><strong>成员函数open和close</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ifstream in(ifile);</span><br><span class="line">ofstream out;</span><br><span class="line">out.open(ifile + &quot;.copy&quot;);  //打开指定文件</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;如果调用open失败. failbit会被置位. 因为调用open可能会失败, 因此需要养成进程检验open成功与否的好习惯.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if(out)</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;一旦一个文件流打开了, 它就保持与文件的关联. 如果再对一个已经打开的文件流调用open将会失败, 并会导致failbit被置位. 为了将文件流关联到另外一个文件,必须先关闭已经关联的文件流. </p>
+<p><strong>自动构造和析构</strong><br>&emsp;&emsp;考虑这样一个程序：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for(auto p = argc + 1; p != argv + argc; ++p)&#123;</span><br><span class="line">    ifstream input(*p)  //创建输入流并打开文件</span><br><span class="line">    if(input)</span><br><span class="line">        process(input);</span><br><span class="line">    else</span><br><span class="line">        cerr &lt;&lt; &quot;couldn&apos;t open: &quot; + string(*p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这样，每一个循环都会构造一个新的名为input的ifstream对象, 并打开它来读取对应文件. 但是由于input是while的局部变量, 因此在每一次循环都会创建和销毁一次. 当一个fstream离开其作用域时, 与之关联的文件会自动关闭. 在下一步循环中, input会被自动创建. <strong>当一个fstream被销毁时, close会自动被调用</strong></p>
+<h3 id="文件模式"><a href="#文件模式" class="headerlink" title="文件模式"></a>文件模式</h3>
       
     </div>
     
@@ -435,11 +404,9 @@ Pr(Class_i|Object)*Pr(Object)*IOU^{truth}_{pred} = Pr(Class_i)*IOU^{truth}_{pred
       
         <div class="post-tags">
           
-            <a href="/tags/深度学习/" rel="tag"># 深度学习</a>
+            <a href="/tags/文件流/" rel="tag"># 文件流</a>
           
-            <a href="/tags/YOLO/" rel="tag"># YOLO</a>
-          
-            <a href="/tags/目标检测/" rel="tag"># 目标检测</a>
+            <a href="/tags/读写文件/" rel="tag"># 读写文件</a>
           
         </div>
       
@@ -467,8 +434,8 @@ Pr(Class_i|Object)*Pr(Object)*IOU^{truth}_{pred} = Pr(Class_i)*IOU^{truth}_{pred
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/useFacenet-MTCNN-TensorFlow-Realize-Face-Recognition/" rel="next" title="利用MTCNN和Facenet实现实时人脸识别">
-                <i class="fa fa-chevron-left"></i> 利用MTCNN和Facenet实现实时人脸识别
+              <a href="/CPP-io-library/" rel="next" title="IO 类">
+                <i class="fa fa-chevron-left"></i> IO 类
               </a>
             
           </div>
@@ -476,10 +443,6 @@ Pr(Class_i|Object)*Pr(Object)*IOU^{truth}_{pred} = Pr(Class_i)*IOU^{truth}_{pred
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/nms/" rel="prev" title="非极大值抑制算法原理">
-                非极大值抑制算法原理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -654,7 +617,7 @@ Pr(Class_i|Object)*Pr(Object)*IOU^{truth}_{pred} = Pr(Class_i)*IOU^{truth}_{pred
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#滑动窗口"><span class="nav-number">1.</span> <span class="nav-text">滑动窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全卷积"><span class="nav-number">2.</span> <span class="nav-text">全卷积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#YOLO算法原理"><span class="nav-number">3.</span> <span class="nav-text">YOLO算法原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#YOLO设计理念"><span class="nav-number">4.</span> <span class="nav-text">YOLO设计理念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络设计"><span class="nav-number">5.</span> <span class="nav-text">网络设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型的训练"><span class="nav-number">6.</span> <span class="nav-text">模型的训练</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络的预测"><span class="nav-number">7.</span> <span class="nav-text">网络的预测</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用文件流对象"><span class="nav-number">1.</span> <span class="nav-text">使用文件流对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件模式"><span class="nav-number">2.</span> <span class="nav-text">文件模式</span></a></li></ol></div>
             
 
           </div>
@@ -1242,31 +1205,7 @@ Pr(Class_i|Object)*Pr(Object)*IOU^{truth}_{pred} = Pr(Class_i)*IOU^{truth}_{pred
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     
     
-  </script>
-
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
@@ -1284,6 +1223,10 @@ Pr(Class_i|Object)*Pr(Object)*IOU^{truth}_{pred} = Pr(Class_i)*IOU^{truth}_{pred
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
+
+  
+
+  
   
 
 
