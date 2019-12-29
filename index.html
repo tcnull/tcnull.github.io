@@ -379,7 +379,115 @@
 <p>&emsp;&emsp;此处的lines是一个vecotr, 其元素类型是string的vector.</p>
 <p>&emsp;&emsp;虽然容器可以保存几乎任意类型的元素, 但是某些容器对元素类型自己特殊的要求. 例如: 顺序容器的一个版本接受容器大小的参数, 它可以直接使用元素类型的默认构造函数.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;int&gt; ivec(); //也可以不指定容器大小, vector&lt;int&gt; ivec;</span><br></pre></td></tr></table></figure></p>
 <p>&emsp;&emsp;但是, 某些类型没有构造函数, 因此在构造保存这类型的容器时, 不能只给它一个参数数目的参数. 例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//假定noDefault是一个没有默认构造函数的类型</span><br><span class="line">vector&lt;noDefault&gt; ivec(10, init);   //正确, 提供了元素的初始化器</span><br><span class="line">vector&lt;noDefault&gt; ivec(10);         //错误, 必须提供一个元素的初始化器</span><br></pre></td></tr></table></figure></p>
-<p><strong>容器操作</strong><br>|类型别名||<br>|:—:|:—:|<br>|iterator|此容器为迭代器类型|<br>|const_iterator|可以读取元素, 但是不能修改元素的迭代器类型|<br>|size_type|无符号整数类型, 足够保存此容器类型最大的可能容器的大小|<br>|difference_type|带符号整数类型, 足够保存两个迭代器之间的距离|<br>|value_type|元素类型|<br>|reference|元素的左值类型, 与value_type&amp;类型相同|<br>|const_reference|元素的左值类型(即, const value_type&amp;)|<br>|构造函数||<br>|:—:|:—:|<br>|C c;|默认构造函数,构造一个空容器|<br>|C c1(c2)|构造C2的拷贝c1|<br>|C c(b, e)|构造c, 将迭代器b和e指定的范围内的元素拷贝到c|<br>|C c{a, b, c, …}|列表初始化c|<br>|赋值与swap||<br>|:—:|:—:|<br>|c1 = c2|将c1中的元素替换为c2中的元素|<br>|c1 = {a, b, c,…}|将c1中的元素替换为列表中的元素(<strong>不适用于array</strong>)|<br>|a.swap(b)|交换a和b的元素|<br>|swap(a, b)|与a.swap(b)等价|<br>|大小||<br>|:—:|:—:|<br>|c.size()|c中元素的数目, 不支持foeward_list|<br>|c.max_size()|c可保存元素的最大数目, c的容量|<br>|c.empty()|返回bool值, false非空, true为空|</p>
+<p><strong>容器操作</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型别名</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">iterator</td>
+<td style="text-align:center">此容器为迭代器类型</td>
+</tr>
+<tr>
+<td style="text-align:center">const_iterator</td>
+<td style="text-align:center">可以读取元素, 但是不能修改元素的迭代器类型</td>
+</tr>
+<tr>
+<td style="text-align:center">size_type</td>
+<td style="text-align:center">无符号整数类型, 足够保存此容器类型最大的可能容器的大小</td>
+</tr>
+<tr>
+<td style="text-align:center">difference_type</td>
+<td style="text-align:center">带符号整数类型, 足够保存两个迭代器之间的距离</td>
+</tr>
+<tr>
+<td style="text-align:center">value_type</td>
+<td style="text-align:center">元素类型</td>
+</tr>
+<tr>
+<td style="text-align:center">reference</td>
+<td style="text-align:center">元素的左值类型, 与value_type&amp;类型相同</td>
+</tr>
+<tr>
+<td style="text-align:center">const_reference</td>
+<td style="text-align:center">元素的左值类型(即, const value_type&amp;)</td>
+</tr>
+<tr>
+<td style="text-align:center">构造函数</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">:—:</td>
+<td style="text-align:center">:—:</td>
+</tr>
+<tr>
+<td style="text-align:center">C c;</td>
+<td style="text-align:center">默认构造函数,构造一个空容器</td>
+</tr>
+<tr>
+<td style="text-align:center">C c1(c2)</td>
+<td style="text-align:center">构造C2的拷贝c1</td>
+</tr>
+<tr>
+<td style="text-align:center">C c(b, e)</td>
+<td style="text-align:center">构造c, 将迭代器b和e指定的范围内的元素拷贝到c</td>
+</tr>
+<tr>
+<td style="text-align:center">C c{a, b, c, …}</td>
+<td style="text-align:center">列表初始化c</td>
+</tr>
+<tr>
+<td style="text-align:center">赋值与swap</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">:—:</td>
+<td style="text-align:center">:—:</td>
+</tr>
+<tr>
+<td style="text-align:center">c1 = c2</td>
+<td style="text-align:center">将c1中的元素替换为c2中的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">c1 = {a, b, c,…}</td>
+<td style="text-align:center">将c1中的元素替换为列表中的元素(<strong>不适用于array</strong>)</td>
+</tr>
+<tr>
+<td style="text-align:center">a.swap(b)</td>
+<td style="text-align:center">交换a和b的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">swap(a, b)</td>
+<td style="text-align:center">与a.swap(b)等价</td>
+</tr>
+<tr>
+<td style="text-align:center">大小</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">:—:</td>
+<td style="text-align:center">:—:</td>
+</tr>
+<tr>
+<td style="text-align:center">c.size()</td>
+<td style="text-align:center">c中元素的数目, 不支持foeward_list</td>
+</tr>
+<tr>
+<td style="text-align:center">c.max_size()</td>
+<td style="text-align:center">c可保存元素的最大数目, c的容量</td>
+</tr>
+<tr>
+<td style="text-align:center">c.empty()</td>
+<td style="text-align:center">返回bool值, false非空, true为空</td>
+</tr>
+</tbody>
+</table>
+</div>
 
           
         
@@ -2644,7 +2752,15 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":300,"height":600,"mobile":null,"show":true}});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
@@ -2661,13 +2777,5 @@
 <script type="text/javascript" src>
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
-  
-
-
-  
-
-  
-
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":300,"height":600,"mobile":null,"show":true}});</script></body>
+<!-- hexo-inject:end --></body>
 </html>
