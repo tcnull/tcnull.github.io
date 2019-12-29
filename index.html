@@ -373,135 +373,18 @@
 
       
         
-          
-            <p>&emsp;&emsp;一般来说, 每个容器都定义在一个与类型名同名的头文件中. 例如: deque定义在头文件deque中, list定义在头文件list中. </p>
+          <p>&emsp;&emsp;一般来说, 每个容器都定义在一个与类型名同名的头文件中. 例如: deque定义在头文件deque中, list定义在头文件list中. </p>
 <p><strong>对容器可保存类型的限制</strong><br>&emsp;&emsp;顺序容器几乎可以保存任意类型的元素. 特别地, 可以定义一个容器, 其元素类型是另一个容器. 例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;string&gt;&gt; lines; //vector的vecotr</span><br></pre></td></tr></table></figure></p>
 <p>&emsp;&emsp;此处的lines是一个vecotr, 其元素类型是string的vector.</p>
 <p>&emsp;&emsp;虽然容器可以保存几乎任意类型的元素, 但是某些容器对元素类型自己特殊的要求. 例如: 顺序容器的一个版本接受容器大小的参数, 它可以直接使用元素类型的默认构造函数.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;int&gt; ivec(); //也可以不指定容器大小, vector&lt;int&gt; ivec;</span><br></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;但是, 某些类型没有构造函数, 因此在构造保存这类型的容器时, 不能只给它一个参数数目的参数. 例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//假定noDefault是一个没有默认构造函数的类型</span><br><span class="line">vector&lt;noDefault&gt; ivec(10, init);   //正确, 提供了元素的初始化器</span><br><span class="line">vector&lt;noDefault&gt; ivec(10);         //错误, 必须提供一个元素的初始化器</span><br></pre></td></tr></table></figure></p>
-<p><strong>容器操作</strong></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">类型别名</th>
-<th style="text-align:center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">iterator</td>
-<td style="text-align:center">此容器为迭代器类型</td>
-</tr>
-<tr>
-<td style="text-align:center">const_iterator</td>
-<td style="text-align:center">可以读取元素, 但是不能修改元素的迭代器类型</td>
-</tr>
-<tr>
-<td style="text-align:center">size_type</td>
-<td style="text-align:center">无符号整数类型, 足够保存此容器类型最大的可能容器的大小</td>
-</tr>
-<tr>
-<td style="text-align:center">difference_type</td>
-<td style="text-align:center">带符号整数类型, 足够保存两个迭代器之间的距离</td>
-</tr>
-<tr>
-<td style="text-align:center">value_type</td>
-<td style="text-align:center">元素类型</td>
-</tr>
-<tr>
-<td style="text-align:center">reference</td>
-<td style="text-align:center">元素的左值类型, 与value_type&amp;类型相同</td>
-</tr>
-<tr>
-<td style="text-align:center">const_reference</td>
-<td style="text-align:center">元素的左值类型(即, const value_type&amp;)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">构造函数</th>
-<th style="text-align:center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">C c;</td>
-<td style="text-align:center">默认构造函数,构造一个空容器</td>
-</tr>
-<tr>
-<td style="text-align:center">C c1(c2)</td>
-<td style="text-align:center">构造C2的拷贝c1</td>
-</tr>
-<tr>
-<td style="text-align:center">C c(b, e)</td>
-<td style="text-align:center">构造c, 将迭代器b和e指定的范围内的元素拷贝到c</td>
-</tr>
-<tr>
-<td style="text-align:center">C c{a, b, c, …}</td>
-<td style="text-align:center">列表初始化c</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">赋值与swap</th>
-<th style="text-align:center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">c1 = c2</td>
-<td style="text-align:center">将c1中的元素替换为c2中的元素</td>
-</tr>
-<tr>
-<td style="text-align:center">c1 = {a, b, c,…}</td>
-<td style="text-align:center">将c1中的元素替换为列表中的元素(<strong>不适用于array</strong>)</td>
-</tr>
-<tr>
-<td style="text-align:center">a.swap(b)</td>
-<td style="text-align:center">交换a和b的元素</td>
-</tr>
-<tr>
-<td style="text-align:center">swap(a, b)</td>
-<td style="text-align:center">与a.swap(b)等价</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">大小</th>
-<th style="text-align:center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">c.size()</td>
-<td style="text-align:center">c中元素的数目, 不支持foeward_list</td>
-</tr>
-<tr>
-<td style="text-align:center">c.max_size()</td>
-<td style="text-align:center">c可保存元素的最大数目, c的容量</td>
-</tr>
-<tr>
-<td style="text-align:center">c.empty()</td>
-<td style="text-align:center">返回bool值, false非空, true为空</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-          
+<p>&emsp;&emsp;但是, 某些类型没有构造函数, 因此在构造保存这类型的容器时, 不能只给它一个参数数目的参数. 例如:<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/container-lib-overview/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
