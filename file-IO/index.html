@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作|fstream strm;|创建一个未绑定的文件流。fstream是头文件中定义的一个类型||:—————-:|:—————————————————————————:||fst">
+<meta name="description" content="&amp;emsp;&amp;emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作     fstream strm; 创建一个未绑定的文件流。fstream是头文件中定义的一个类型     fstream fstrm(s); 创建一个fstream，并打开名">
 <meta name="keywords" content="文件流,读写文件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文件输入输出">
 <meta property="og:url" content="http://tcnull.github.io/file-IO/index.html">
 <meta property="og:site_name" content="TC CODE HOME">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作|fstream strm;|创建一个未绑定的文件流。fstream是头文件中定义的一个类型||:—————-:|:—————————————————————————:||fst">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作     fstream strm; 创建一个未绑定的文件流。fstream是头文件中定义的一个类型     fstream fstrm(s); 创建一个fstream，并打开名">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-12-29T01:53:40.060Z">
+<meta property="og:updated_time" content="2019-12-29T02:35:13.905Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文件输入输出">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作|fstream strm;|创建一个未绑定的文件流。fstream是头文件中定义的一个类型||:—————-:|:—————————————————————————:||fst">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作     fstream strm; 创建一个未绑定的文件流。fstream是头文件中定义的一个类型     fstream fstrm(s); 创建一个fstream，并打开名">
 
 
 
@@ -379,7 +379,39 @@
 
       
         <p>&emsp;&emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。</p>
-<p>表1：fstream特有操作<br>|fstream strm;|创建一个未绑定的文件流。fstream是头文件中定义的一个类型|<br>|:—————-:|:—————————————————————————:|<br>|fstream fstrm(s);|创建一个fstream，并打开名为s的文件。s可以是string类型，或者是一个指向C风格字符串类型的指针。这些构造函数都是explicit的。默认的文件模式依赖于fstream的模式。|<br>|fstream fstrm(s, mode);|与前一个构造函数类似，都是以mode模式打开文件|<br>|fstrm.open(s)|打开一个名为s的文件，并与fstrm绑定。s可以是一个string或者一个指向C风格字符串的指针。默认的文件模式依赖于fstream的类型|<br>|fstrm.close()|关闭与fstrm绑定的文件。返回void|<br>|fstrm。is_open()|返回一个bool值，指出与fstrm关联的文件是否成功打开且未关闭|</p>
+<p>表1：fstream特有操作</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">fstream strm;</th>
+<th style="text-align:center">创建一个未绑定的文件流。fstream是头文件中定义的一个类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">fstream fstrm(s);</td>
+<td style="text-align:center">创建一个fstream，并打开名为s的文件。s可以是string类型，或者是一个指向C风格字符串类型的指针。这些构造函数都是explicit的。默认的文件模式依赖于fstream的模式。</td>
+</tr>
+<tr>
+<td style="text-align:center">fstream fstrm(s, mode);</td>
+<td style="text-align:center">与前一个构造函数类似，都是以mode模式打开文件</td>
+</tr>
+<tr>
+<td style="text-align:center">fstrm.open(s)</td>
+<td style="text-align:center">打开一个名为s的文件，并与fstrm绑定。s可以是一个string或者一个指向C风格字符串的指针。默认的文件模式依赖于fstream的类型</td>
+</tr>
+<tr>
+<td style="text-align:center">fstrm.close()</td>
+<td style="text-align:center">关闭与fstrm绑定的文件。返回void</td>
+</tr>
+<tr>
+<td style="text-align:center">fstrm。is_open()</td>
+<td style="text-align:center">返回一个bool值，指出与fstrm关联的文件是否成功打开且未关闭</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h3 id="使用文件流对象"><a href="#使用文件流对象" class="headerlink" title="使用文件流对象"></a>使用文件流对象</h3><p>&emsp;&emsp;每个文件流类都定义了一个open成员函数. 在创建文件流对象时, 可以直接提供文件名(可选), 当提供了文件名时, 会自动调用open().<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifstream in(ifile); //构造一个ifstream类型的流对象并打开文件</span><br><span class="line">ofstream out;       //构造一个输出文件流, 但是未与任何文件关联</span><br></pre></td></tr></table></figure></p>
 <p>&emsp;&emsp;在新的C++标准中, 文件名可以是库类型string对象, 也可以是C风格字符数组. 旧版本的标准库只允许是C风格字符数组.<br><a id="more"></a><br><strong>用fstream代替iostream&amp;</strong></p>
 <p><strong>成员函数open和close</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ifstream in(ifile);</span><br><span class="line">ofstream out;</span><br><span class="line">out.open(ifile + &quot;.copy&quot;);  //打开指定文件</span><br></pre></td></tr></table></figure></p>

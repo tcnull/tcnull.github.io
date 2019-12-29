@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[文件输入输出]]></title>
     <url>%2Ffile-IO%2F</url>
-    <content type="text"><![CDATA[&emsp;&emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作|fstream strm;|创建一个未绑定的文件流。fstream是头文件中定义的一个类型||:—————-:|:—————————————————————————:||fstream fstrm(s);|创建一个fstream，并打开名为s的文件。s可以是string类型，或者是一个指向C风格字符串类型的指针。这些构造函数都是explicit的。默认的文件模式依赖于fstream的模式。||fstream fstrm(s, mode);|与前一个构造函数类似，都是以mode模式打开文件||fstrm.open(s)|打开一个名为s的文件，并与fstrm绑定。s可以是一个string或者一个指向C风格字符串的指针。默认的文件模式依赖于fstream的类型||fstrm.close()|关闭与fstrm绑定的文件。返回void||fstrm。is_open()|返回一个bool值，指出与fstrm关联的文件是否成功打开且未关闭| 使用文件流对象&emsp;&emsp;每个文件流类都定义了一个open成员函数. 在创建文件流对象时, 可以直接提供文件名(可选), 当提供了文件名时, 会自动调用open().12ifstream in(ifile); //构造一个ifstream类型的流对象并打开文件ofstream out; //构造一个输出文件流, 但是未与任何文件关联 &emsp;&emsp;在新的C++标准中, 文件名可以是库类型string对象, 也可以是C风格字符数组. 旧版本的标准库只允许是C风格字符数组.用fstream代替iostream&amp; 成员函数open和close123ifstream in(ifile);ofstream out;out.open(ifile + &quot;.copy&quot;); //打开指定文件 &emsp;&emsp;如果调用open失败. failbit会被置位. 因为调用open可能会失败, 因此需要养成进程检验open成功与否的好习惯.1if(out) &emsp;&emsp;一旦一个文件流打开了, 它就保持与文件的关联. 如果再对一个已经打开的文件流调用open将会失败, 并会导致failbit被置位. 为了将文件流关联到另外一个文件,必须先关闭已经关联的文件流. 自动构造和析构&emsp;&emsp;考虑这样一个程序：1234567for(auto p = argc + 1; p != argv + argc; ++p)&#123; ifstream input(*p) //创建输入流并打开文件 if(input) process(input); else cerr &lt;&lt; &quot;couldn&apos;t open: &quot; + string(*p);&#125; &emsp;&emsp;这样，每一个循环都会构造一个新的名为input的ifstream对象, 并打开它来读取对应文件. 但是由于input是while的局部变量, 因此在每一次循环都会创建和销毁一次. 当一个fstream离开其作用域时, 与之关联的文件会自动关闭. 在下一步循环中, input会被自动创建. 当一个fstream被销毁时, close会自动被调用 文件模式]]></content>
+    <content type="text"><![CDATA[&emsp;&emsp;头文件fstream定义了三个类型来支持文件IO：ifstream从一个给定的文件读取数据，ofstream向一个给定文件写入数据，以及fstream可以读写给定文件。 表1：fstream特有操作 fstream strm; 创建一个未绑定的文件流。fstream是头文件中定义的一个类型 fstream fstrm(s); 创建一个fstream，并打开名为s的文件。s可以是string类型，或者是一个指向C风格字符串类型的指针。这些构造函数都是explicit的。默认的文件模式依赖于fstream的模式。 fstream fstrm(s, mode); 与前一个构造函数类似，都是以mode模式打开文件 fstrm.open(s) 打开一个名为s的文件，并与fstrm绑定。s可以是一个string或者一个指向C风格字符串的指针。默认的文件模式依赖于fstream的类型 fstrm.close() 关闭与fstrm绑定的文件。返回void fstrm。is_open() 返回一个bool值，指出与fstrm关联的文件是否成功打开且未关闭 使用文件流对象&emsp;&emsp;每个文件流类都定义了一个open成员函数. 在创建文件流对象时, 可以直接提供文件名(可选), 当提供了文件名时, 会自动调用open().12ifstream in(ifile); //构造一个ifstream类型的流对象并打开文件ofstream out; //构造一个输出文件流, 但是未与任何文件关联 &emsp;&emsp;在新的C++标准中, 文件名可以是库类型string对象, 也可以是C风格字符数组. 旧版本的标准库只允许是C风格字符数组.用fstream代替iostream&amp; 成员函数open和close123ifstream in(ifile);ofstream out;out.open(ifile + &quot;.copy&quot;); //打开指定文件 &emsp;&emsp;如果调用open失败. failbit会被置位. 因为调用open可能会失败, 因此需要养成进程检验open成功与否的好习惯.1if(out) &emsp;&emsp;一旦一个文件流打开了, 它就保持与文件的关联. 如果再对一个已经打开的文件流调用open将会失败, 并会导致failbit被置位. 为了将文件流关联到另外一个文件,必须先关闭已经关联的文件流. 自动构造和析构&emsp;&emsp;考虑这样一个程序：1234567for(auto p = argc + 1; p != argv + argc; ++p)&#123; ifstream input(*p) //创建输入流并打开文件 if(input) process(input); else cerr &lt;&lt; &quot;couldn&apos;t open: &quot; + string(*p);&#125; &emsp;&emsp;这样，每一个循环都会构造一个新的名为input的ifstream对象, 并打开它来读取对应文件. 但是由于input是while的局部变量, 因此在每一次循环都会创建和销毁一次. 当一个fstream离开其作用域时, 与之关联的文件会自动关闭. 在下一步循环中, input会被自动创建. 当一个fstream被销毁时, close会自动被调用 文件模式]]></content>
       <categories>
         <category>C++</category>
       </categories>
@@ -108,9 +108,9 @@
         <category>深度学习</category>
       </categories>
       <tags>
+        <tag>人脸检测</tag>
         <tag>MTCNN</tag>
         <tag>Facenet</tag>
-        <tag>人脸检测</tag>
         <tag>人脸识别</tag>
       </tags>
   </entry>
@@ -122,10 +122,10 @@
         <category>深度学习</category>
       </categories>
       <tags>
-        <tag>MTCNN</tag>
-        <tag>人脸检测</tag>
         <tag>卷积神经网络</tag>
+        <tag>人脸检测</tag>
         <tag>人脸对齐</tag>
+        <tag>MTCNN</tag>
       </tags>
   </entry>
   <entry>
