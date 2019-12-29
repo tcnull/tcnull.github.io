@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="神经元,神经网络,激活函数,卷积神经网络,循环神经网络,阶跃函数,Sigmoid函数,tanh函数,ReLU函数">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,29 +79,18 @@
 
 
 
-<meta name="description" content="神经网络（neural networks)方面的研究很早就已经出现，今天神经网络已经出现了很多种类，比如CNN(Convolution Neural Network), RNN(Recurrent Neural Network)等等。下面将从模型神经元逐步深入到神经网络，再到如今流行的卷积神经网络，循环神经网络；还将介绍一些常见的激活函数，如：阶跃函数，Sigmoid函数， tanh函数， ReL">
-<meta name="keywords" content="神经元,神经网络,激活函数,卷积神经网络,循环神经网络,阶跃函数,Sigmoid函数,tanh函数,ReLU函数">
+<meta name="description" content="&amp;emsp;&amp;emsp;一般来说, 每个容器都定义在一个与类型名同名的头文件中. 例如: deque定义在头文件deque中, list定义在头文件list中.  对容器可保存类型的限制&amp;emsp;&amp;emsp;顺序容器几乎可以保存任意类型的元素. 特别地, 可以定义一个容器, 其元素类型是另一个容器. 例如:1vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; lines; //">
+<meta name="keywords" content="hexo, 神经网络, CNN, RNN, 深度学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从神经元到神经网络">
-<meta property="og:url" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/index.html">
+<meta property="og:title" content="容器库概览">
+<meta property="og:url" content="http://tcnull.github.io/container-lib-overview/index.html">
 <meta property="og:site_name" content="TC CODE HOME">
-<meta property="og:description" content="神经网络（neural networks)方面的研究很早就已经出现，今天神经网络已经出现了很多种类，比如CNN(Convolution Neural Network), RNN(Recurrent Neural Network)等等。下面将从模型神经元逐步深入到神经网络，再到如今流行的卷积神经网络，循环神经网络；还将介绍一些常见的激活函数，如：阶跃函数，Sigmoid函数， tanh函数， ReL">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;一般来说, 每个容器都定义在一个与类型名同名的头文件中. 例如: deque定义在头文件deque中, list定义在头文件list中.  对容器可保存类型的限制&amp;emsp;&amp;emsp;顺序容器几乎可以保存任意类型的元素. 特别地, 可以定义一个容器, 其元素类型是另一个容器. 例如:1vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; lines; //">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/neural.png">
-<meta property="og:image" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/threshold.png">
-<meta property="og:image" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/Sigmoid.png">
-<meta property="og:image" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/tanh.png">
-<meta property="og:image" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/ReLU.png">
-<meta property="og:image" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/NN.png">
-<meta property="og:image" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/Convolution1.png">
-<meta property="og:image" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/Convolution2.gif">
-<meta property="og:image" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/CNN_Pooling.png">
-<meta property="og:image" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/RNNs.png">
-<meta property="og:updated_time" content="2019-05-14T13:44:07.250Z">
+<meta property="og:updated_time" content="2019-12-29T03:46:24.239Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从神经元到神经网络">
-<meta name="twitter:description" content="神经网络（neural networks)方面的研究很早就已经出现，今天神经网络已经出现了很多种类，比如CNN(Convolution Neural Network), RNN(Recurrent Neural Network)等等。下面将从模型神经元逐步深入到神经网络，再到如今流行的卷积神经网络，循环神经网络；还将介绍一些常见的激活函数，如：阶跃函数，Sigmoid函数， tanh函数， ReL">
-<meta name="twitter:image" content="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/neural.png">
+<meta name="twitter:title" content="容器库概览">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;一般来说, 每个容器都定义在一个与类型名同名的头文件中. 例如: deque定义在头文件deque中, list定义在头文件list中.  对容器可保存类型的限制&amp;emsp;&amp;emsp;顺序容器几乎可以保存任意类型的元素. 特别地, 可以定义一个容器, 其元素类型是另一个容器. 例如:1vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; lines; //">
 
 
 
@@ -131,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/">
+  <link rel="canonical" href="http://tcnull.github.io/container-lib-overview/">
 
 
 
 
 
-  <title>从神经元到神经网络 | TC CODE HOME</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>容器库概览 | TC CODE HOME</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -285,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tcnull.github.io/fromNeuronToCNNRNNAndDeepLearning/">
+    <link itemprop="mainEntityOfPage" href="http://tcnull.github.io/container-lib-overview/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TomCat代码小屋">
@@ -302,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">从神经元到神经网络</h1>
+          <h1 class="post-title" itemprop="name headline">容器库概览</h1>
         
 
         <div class="post-meta">
@@ -314,8 +303,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-14T00:00:00+08:00">
-                2019-04-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-29T11:45:48+08:00">
+                2019-12-29
               </time>
             
 
@@ -337,8 +326,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/神经网络/" itemprop="url" rel="index">
-                    <span itemprop="name">神经网络</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
                   </a>
                 </span>
 
@@ -355,8 +344,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/fromNeuronToCNNRNNAndDeepLearning/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/fromNeuronToCNNRNNAndDeepLearning/" itemprop="commentCount"></span>
+                <a href="/container-lib-overview/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/container-lib-overview/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -375,10 +364,6 @@
           
 
           
-              <div class="post-description">
-                  神经网络（neural networks)方面的研究很早就已经出现，今天神经网络已经出现了很多种类，比如CNN(Convolution Neural Network), RNN(Recurrent Neural Network)等等。下面将从模型神经元逐步深入到神经网络，再到如今流行的卷积神经网络，循环神经网络；还将介绍一些常见的激活函数，如：阶跃函数，Sigmoid函数， tanh函数， ReLU函数。
-              </div>
-          
 
         </div>
       </header>
@@ -393,35 +378,12 @@
       
 
       
-        <p>&emsp;&emsp;神经网络（neural networks)方面的研究很早就已经出现，今天“神经网络”已经是一个相当大的，多学科交叉的学科领域。神经网络已经出现了很多种类，比如CNN(Convolution Neural Network), RNN(Recurrent Neural Network)等等。下面将从神经网络的最基础的模型神经元逐步深入到CNN， RNN。</p>
-<h1 id="什么是神经元（neuron"><a href="#什么是神经元（neuron" class="headerlink" title="什么是神经元（neuron)?"></a>什么是神经元（neuron)?</h1><p>&emsp;&emsp;神经元是神经网络中最基本的成分。在生物神经网络中，每个神经元与其他神经元相连，当它“兴奋”时，就会向其他神经元发送化学物质，依次改变神经元内的电位。如果神经元内的电位超过某一个阈值(threshold)，那么它就会被“激活”为“兴奋”状态，继续为其他神经元发送化学物质。<br>&emsp;&emsp;神经网络的灵感就来源于生物神经网络，即它接受一些输入，然后给出一个输出。在机器学习中，神经网络就是一个数学占位符，它的工作就是对输入进行一个函数变换，然后给出输出。</p>
-<p><img src="/fromNeuronToCNNRNNAndDeepLearning/neural.png" width="300" height="200" alt="neural" align="center"><br>&emsp;&emsp;在神经元模型中，该神经元收到来自其他n个神经元的通过带权连接传递的输入信号。神经元要将接受到的总输入值与神经元的阈值进行比较，然后利用激活函数(activation function)进行变换产生神经元的输出。</p>
-<h1 id="常见的激活函数"><a href="#常见的激活函数" class="headerlink" title="常见的激活函数"></a>常见的激活函数</h1><a id="more"></a>
-<h2 id="阶跃函数-step-function"><a href="#阶跃函数-step-function" class="headerlink" title="阶跃函数(step function)"></a>阶跃函数(step function)</h2><p>&emsp;&emsp;阶跃函数是最理想的激活函数，因为它将输入值映射为“0”或者“1”，分别对应神经元的“抑制”或者“兴奋”。<br><img src="/fromNeuronToCNNRNNAndDeepLearning/threshold.png" width="300" height="200" alt="threshold" align="center"></p>
-<script type="math/tex; mode=display">
-sgn(x)=\begin{cases}
-1,\quad x\geq 0 \\\\
-0,\quad x<0
-\end{cases}</script><p>&emsp;&emsp;但是在实际应用中阶跃函数由于其不连续、不光滑的数学性质不常被使用。</p>
-<h2 id="Sigmoid函数"><a href="#Sigmoid函数" class="headerlink" title="Sigmoid函数"></a>Sigmoid函数</h2><p>&emsp;&emsp;典型的Sigmoid函数如下图所示：<br><img src="/fromNeuronToCNNRNNAndDeepLearning/Sigmoid.png" width="300" height="200" alt="Sigmoid" align="center"></p>
-<script type="math/tex; mode=display">
-sigmoid(x)=\frac{1}{1+e^{-x}}</script><p>&emsp;&emsp;Sigmoid函数可以把较大范围内变化的输入值挤压到（0，1）范围内，因此有时也被称为挤压函数， 它适合输出为概率（但是不等同于概率）的情况。<br>利用Sigmoid函数最为激活函数主要有以下几个特点：<br>1、它是一个便于求导的连续光滑函数；<br>2、能够压缩数据，保证数据幅度在（0，1）之间；<br>3、适用于前向传播。<br>&emsp;&emsp;但是利用Sigmoid函数作为激活函数也不得不面对以下几个问题：<br>1、sigmoid函数面临着梯度弥散问题(gradient  vanishing)。<br>从图中可以看出，当输入过大时，及时很大的变化也会引起很小的输出，即梯度消失，这就是梯度弥散问题。<br>并且这个问题会随着网络深度的增加而增加，使网络的学习停留在一定的水平后，很难继续学习。<br>2、Sigmoid函数的输出不是零均值(zero-centered)或者中心化的。以$f(x) = sigmoid(wx+b)$为例。假设输入均为正数（负数），那么对w的导数总是正数（负数），这样在反向传播过程中要么都往正方向更新，要么都往负方向更新，导致有一种捆绑效果，使得收敛缓慢。<br>3、指数运算导致计算量的增加。</p>
-<h2 id="tanh函数"><a href="#tanh函数" class="headerlink" title="tanh函数"></a>tanh函数</h2><p><img src="/fromNeuronToCNNRNNAndDeepLearning/tanh.png" width="300" height="200" alt="tanh" align="center"></p>
-<script type="math/tex; mode=display">
-tanh(x) = \frac{e^x - e^{-x}}{e^x+e^{-x}}</script><p>其实推导可以发现</p>
-<script type="math/tex; mode=display">
-tanh(x) = 2sigmoid(2x) - 1</script><p>&emsp;&emsp;tanh函数将输出压缩到了(-1,1)之间，并且是零均值的。它解决sigmoid函数非零均值的问题；并且在0附近，tanh函数更大的导数，这意味着它将提供更好的学习速率，但是梯度弥散问题在tanh函数中依然存在。</p>
-<h2 id="ReLU函数"><a href="#ReLU函数" class="headerlink" title="ReLU函数"></a>ReLU函数</h2><p><img src="/fromNeuronToCNNRNNAndDeepLearning/ReLU.png" width="300" height="200" alt="ReLU" align="center"></p>
-<script type="math/tex; mode=display">
-ReLU(x) = max(0,x)</script><p>&emsp;&emsp;这是在深度学习中最常用的的一种激活函数，当输入小于0时，它输出为0；当输入大于0时，它的输出为本身。因此：<br>1、它可以使网络更快的收敛，并且不会饱和，在正半轴解决了梯度弥散问题；<br>2、不需要进行指数运算，降低了计算复杂度；<br>3、适用于反向传播。<br>但是ReLU函数也有如下问题：<br>1、输出如sigmoid一样是非零均值的；<br>2、神经元坏死现象：前向传导（forward pass）过程中，如果x&lt;0，梯度永远等于0，则神经元保持非激活状态，导致相应参数永远不会被更新。<br>3、不能对数据幅度做调整，因此随着网络层数的增加，数据幅度会不断地扩张。</p>
-<h1 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h1><p>&emsp;&emsp;神经网络是有神经元连接起来的而形成的模型，如下图：<br><img src="/fromNeuronToCNNRNNAndDeepLearning/NN.png" width="300" height="200" alt="NN" align="center"><br>&emsp;&emsp;在了解神经网络其他概念之前，有必要了解以下神经网络中Layer（层）的概念，一层Layer是指具有输入和输出的神经元，如图中的Layer2和Layer3。最左边的Layer1为网络的输入层，虽然输入层也叫层，但是在计算神经网络层数的时候，通常不计算输入层；中间的层叫做隐藏层，如上图的Layer L2； 最后一层叫做输出层，如上图的Layer L3；在计算模型层数的时候，只计算隐藏层和输出层，例如上面就是一个两层的神经网络模型。</p>
-<h1 id="深度神经网络"><a href="#深度神经网络" class="headerlink" title="深度神经网络"></a>深度神经网络</h1><p>&emsp;&emsp;深度神经网络一般是指具有超过一个隐藏层的模型。下面介绍一些现在常用的深度神经网络模型。</p>
-<h2 id="卷积神经网络（Convolution-Neural-Network，-CNN）"><a href="#卷积神经网络（Convolution-Neural-Network，-CNN）" class="headerlink" title="卷积神经网络（Convolution Neural Network， CNN）"></a>卷积神经网络（Convolution Neural Network， CNN）</h2><p>&emsp;&emsp;卷积神经网络是一种专门用来处理具有网格结构的数据的神经网络。例如时间序列数据和图像数据（看作二维的像素网格），现在卷积神经网络在计算机视觉领域应用非常广泛。卷积神经网络的名称来源于它使用了卷积（convolution）这种数学运算，即一种特殊的线性运算。但是卷积模型除了卷积层，还通常包含池化层，全连接层和归一化层。</p>
-<h3 id="卷积运算"><a href="#卷积运算" class="headerlink" title="卷积运算"></a>卷积运算</h3><p>&emsp;&emsp;在卷积网络的术语中，卷积的第一个参数通常叫做输入，第二个参数叫做核函数（kernel function)， 输出常称为特征映射（Feature Map)。卷积运算的过程可以通俗的理解为一个输入经过一个“滤波器（卷积核）”产生输出（Feature Map）。<br>&emsp;&emsp;卷积运算的计算过程如下图所示：<br><img src="/fromNeuronToCNNRNNAndDeepLearning/Convolution1.png" width="300" height="200" alt="Convolution1" align="center"><br>&emsp;&emsp;根据上图的卷积计算过程，可以看到下图这个例子中155的计算过程：</p>
-<script type="math/tex; mode=display">
-0\times -1 + 0\times -2+75\times -1+0\times 0+75\times 0+80\times 0+0\times 1+75\times 2+80\times 1 = 155</script><p><img src="/fromNeuronToCNNRNNAndDeepLearning/Convolution2.gif" width="300" height="200" alt="Convolution2" align="center"></p>
-<h3 id="池化-Pooling-运算"><a href="#池化-Pooling-运算" class="headerlink" title="池化(Pooling)运算"></a>池化(Pooling)运算</h3><p>&emsp;&emsp;池化是一个基于采样的离散化处理。它的目标是对输入(图片，隐藏层，输出矩阵等)进行下采样，通过去掉Feature Map中不重要的样本，进一步减少参数数量。<br>Pooing的方法很多，最常用的是Max Pooing，即在 $n \times n$ 的样本中取最大值作为采样后的值；对于深度为D的Feature Map，各层独立做Pooing，因此Pooing后的深度仍然为D。<br><img src="/fromNeuronToCNNRNNAndDeepLearning/CNN_Pooling.png" width="300" height="200" alt="CNN_Pooling" align="center"></p>
-<h2 id="循环神经网络（Recurrent-Neural-Networks，-RNNs）"><a href="#循环神经网络（Recurrent-Neural-Networks，-RNNs）" class="headerlink" title="循环神经网络（Recurrent Neural Networks， RNNs）"></a>循环神经网络（Recurrent Neural Networks， RNNs）</h2><p>&emsp;&emsp;循环神经网络已经在众多自然语言处理(Natural Language Processing, NLP)领域中取得了巨大成功。下图展现了RNNs的结构图以及对应的展开图。<br><img src="/fromNeuronToCNNRNNAndDeepLearning/RNNs.png" width="300" height="200" alt="RNNs" align="center"><br>&emsp;&emsp;通过这个图我们可以清晰的看到RNNs的计算过程。网络在t时刻接收到输入$x_t$之后，隐藏层的值$s_t$是，输出值是$o_t$。关键一点是，本层不仅仅取决于本层输入，还取决于上一层的输出。这个特性可以利用被用于处理语言模型中词语的关联性。在实际语言处理时，要推测当前词仅仅关注前面的词语是不够的，往往还需要后面的词，这个时候往往需要使用双向循环神经网络。</p>
+        <p>&emsp;&emsp;一般来说, 每个容器都定义在一个与类型名同名的头文件中. 例如: deque定义在头文件deque中, list定义在头文件list中. </p>
+<p><strong>对容器可保存类型的限制</strong><br>&emsp;&emsp;顺序容器几乎可以保存任意类型的元素. 特别地, 可以定义一个容器, 其元素类型是另一个容器. 例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;string&gt;&gt; lines; //vector的vecotr</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;此处的lines是一个vecotr, 其元素类型是string的vector.</p>
+<p>&emsp;&emsp;虽然容器可以保存几乎任意类型的元素, 但是某些容器对元素类型自己特殊的要求. 例如: 顺序容器的一个版本接受容器大小的参数, 它可以直接使用元素类型的默认构造函数.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;int&gt; ivec(); //也可以不指定容器大小, vector&lt;int&gt; ivec;</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;但是, 某些类型没有构造函数, 因此在构造保存这类型的容器时, 不能只给它一个参数数目的参数. 例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//假定noDefault是一个没有默认构造函数的类型</span><br><span class="line">vector&lt;noDefault&gt; ivec(10, init);   //正确, 提供了元素的初始化器</span><br><span class="line">vector&lt;noDefault&gt; ivec(10);         //错误, 必须提供一个元素的初始化器</span><br></pre></td></tr></table></figure></p>
+<p><strong>容器操作</strong><br>|类型别名||<br>|:—:|:—:|<br>|iterator|此容器为迭代器类型|<br>|const_iterator|可以读取元素, 但是不能修改元素的迭代器类型|<br>|size_type|无符号整数类型, 足够保存此容器类型最大的可能容器的大小|<br>|difference_type|带符号整数类型, 足够保存两个迭代器之间的距离|<br>|value_type|元素类型|<br>|reference|元素的左值类型, 与value_type&amp;类型相同|<br>|const_reference|元素的左值类型(即, const value_type&amp;)|<br>|构造函数||<br>|:—:|:—:|<br>|C c;|默认构造函数,构造一个空容器|<br>|C c1(c2)|构造C2的拷贝c1|<br>|C c(b, e)|构造c, 将迭代器b和e指定的范围内的元素拷贝到c|<br>|C c{a, b, c, …}|列表初始化c|<br>|赋值与swap||<br>|:—:|:—:|<br>|c1 = c2|将c1中的元素替换为c2中的元素|<br>|c1 = {a, b, c,…}|将c1中的元素替换为列表中的元素(<strong>不适用于array</strong>)|<br>|a.swap(b)|交换a和b的元素|<br>|swap(a, b)|与a.swap(b)等价|<br>|大小||<br>|:—:|:—:|<br>|c.size()|c中元素的数目, 不支持foeward_list|<br>|c.max_size()|c可保存元素的最大数目, c的容量|<br>|c.empty()|返回bool值, false非空, true为空|</p>
 
       
     </div>
@@ -436,20 +398,6 @@ ReLU(x) = max(0,x)</script><p>&emsp;&emsp;这是在深度学习中最常用的�
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/神经网络/" rel="tag"># 神经网络</a>
-          
-            <a href="/tags/神经元/" rel="tag"># 神经元</a>
-          
-            <a href="/tags/激活函数/" rel="tag"># 激活函数</a>
-          
-            <a href="/tags/CNN/" rel="tag"># CNN</a>
-          
-            <a href="/tags/RNN/" rel="tag"># RNN</a>
-          
-        </div>
       
 
       
@@ -475,8 +423,8 @@ ReLU(x) = max(0,x)</script><p>&emsp;&emsp;这是在深度学习中最常用的�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/hexoErrorCollection/" rel="next" title="Hexo配置过程中遇到的坑及解决方法">
-                <i class="fa fa-chevron-left"></i> Hexo配置过程中遇到的坑及解决方法
+              <a href="/sequential-container-overview/" rel="next" title="顺序容器概述">
+                <i class="fa fa-chevron-left"></i> 顺序容器概述
               </a>
             
           </div>
@@ -484,10 +432,6 @@ ReLU(x) = max(0,x)</script><p>&emsp;&emsp;这是在深度学习中最常用的�
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/SingleResponsibilityPrinciple/" rel="prev" title="设计模式六大原则——单一职责原则">
-                设计模式六大原则——单一职责原则 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -580,17 +524,8 @@ ReLU(x) = max(0,x)</script><p>&emsp;&emsp;这是在深度学习中最常用的�
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -652,22 +587,6 @@ ReLU(x) = max(0,x)</script><p>&emsp;&emsp;这是在深度学习中最常用的�
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是神经元（neuron"><span class="nav-number">1.</span> <span class="nav-text">什么是神经元（neuron)?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的激活函数"><span class="nav-number">2.</span> <span class="nav-text">常见的激活函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#阶跃函数-step-function"><span class="nav-number">2.1.</span> <span class="nav-text">阶跃函数(step function)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sigmoid函数"><span class="nav-number">2.2.</span> <span class="nav-text">Sigmoid函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tanh函数"><span class="nav-number">2.3.</span> <span class="nav-text">tanh函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ReLU函数"><span class="nav-number">2.4.</span> <span class="nav-text">ReLU函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#神经网络"><span class="nav-number">3.</span> <span class="nav-text">神经网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#深度神经网络"><span class="nav-number">4.</span> <span class="nav-text">深度神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#卷积神经网络（Convolution-Neural-Network，-CNN）"><span class="nav-number">4.1.</span> <span class="nav-text">卷积神经网络（Convolution Neural Network， CNN）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#卷积运算"><span class="nav-number">4.1.1.</span> <span class="nav-text">卷积运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#池化-Pooling-运算"><span class="nav-number">4.1.2.</span> <span class="nav-text">池化(Pooling)运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环神经网络（Recurrent-Neural-Networks，-RNNs）"><span class="nav-number">4.2.</span> <span class="nav-text">循环神经网络（Recurrent Neural Networks， RNNs）</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -1250,31 +1169,7 @@ ReLU(x) = max(0,x)</script><p>&emsp;&emsp;这是在深度学习中最常用的�
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     
     
-  </script>
-
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config("");
 </script>
@@ -1292,6 +1187,10 @@ ReLU(x) = max(0,x)</script><p>&emsp;&emsp;这是在深度学习中最常用的�
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
+
+  
+
+  
   
 
 

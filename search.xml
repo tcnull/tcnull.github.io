@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[容器库概览]]></title>
+    <url>%2Fcontainer-lib-overview%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;一般来说, 每个容器都定义在一个与类型名同名的头文件中. 例如: deque定义在头文件deque中, list定义在头文件list中. 对容器可保存类型的限制&emsp;&emsp;顺序容器几乎可以保存任意类型的元素. 特别地, 可以定义一个容器, 其元素类型是另一个容器. 例如:1vector&lt;vector&lt;string&gt;&gt; lines; //vector的vecotr &emsp;&emsp;此处的lines是一个vecotr, 其元素类型是string的vector. &emsp;&emsp;虽然容器可以保存几乎任意类型的元素, 但是某些容器对元素类型自己特殊的要求. 例如: 顺序容器的一个版本接受容器大小的参数, 它可以直接使用元素类型的默认构造函数.1vector&lt;int&gt; ivec(); //也可以不指定容器大小, vector&lt;int&gt; ivec; &emsp;&emsp;但是, 某些类型没有构造函数, 因此在构造保存这类型的容器时, 不能只给它一个参数数目的参数. 例如:123//假定noDefault是一个没有默认构造函数的类型vector&lt;noDefault&gt; ivec(10, init); //正确, 提供了元素的初始化器vector&lt;noDefault&gt; ivec(10); //错误, 必须提供一个元素的初始化器 容器操作|类型别名|||:—:|:—:||iterator|此容器为迭代器类型||const_iterator|可以读取元素, 但是不能修改元素的迭代器类型||size_type|无符号整数类型, 足够保存此容器类型最大的可能容器的大小||difference_type|带符号整数类型, 足够保存两个迭代器之间的距离||value_type|元素类型||reference|元素的左值类型, 与value_type&amp;类型相同||const_reference|元素的左值类型(即, const value_type&amp;)||构造函数|||:—:|:—:||C c;|默认构造函数,构造一个空容器||C c1(c2)|构造C2的拷贝c1||C c(b, e)|构造c, 将迭代器b和e指定的范围内的元素拷贝到c||C c{a, b, c, …}|列表初始化c||赋值与swap|||:—:|:—:||c1 = c2|将c1中的元素替换为c2中的元素||c1 = {a, b, c,…}|将c1中的元素替换为列表中的元素(不适用于array)||a.swap(b)|交换a和b的元素||swap(a, b)|与a.swap(b)等价||大小|||:—:|:—:||c.size()|c中元素的数目, 不支持foeward_list||c.max_size()|c可保存元素的最大数目, c的容量||c.empty()|返回bool值, false非空, true为空|]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[顺序容器概述]]></title>
     <url>%2Fsequential-container-overview%2F</url>
     <content type="text"><![CDATA[表1 顺序容器的类型 vector 可变大小的数组. 支持文件快速随机访问. 在尾部之外的位置插入和删除元素的速度可能很慢 deque 双端队列. 支持快速随机访问. 在头尾插入和删除元素的速度很快. list 双向链表. 只支持双向顺序访问. 在list中任何位置插入和删除元素的操作都很快 forward_list 单向链表. 只支持单向顺序访问. 在链表任何位置进行插入和删除的操作都很快 array 固定大小的数组. 支持快速随机访问, 不能添加和删除元素 string 与vector相似的容器, 但专门用于保存字符. 随机快速访问速度快. 在尾部插入和删除的速度快 &emsp;&emsp;string和vector将元素保存在连续的内存空间中. 由于元素是连续存储的, 由元素的下标在来计算元素的地址非常快速. 但是在这两种容器中间插入和删除元素会非常耗时. 因为一次插入和删除操作之后, 需要移动插入/删除位置之后的所有元素, 来保持连续存储. 另外, 在添加一个元素时, 有时还可能需要额外分配内存, 这是可能需要将所有的元素移动到新的内存空间中.&emsp;&emsp;list和forward_list两个容器的设计目的是令容器的插入删除操作都很快. 但是, 作为代价, 它们不支持随机访问. 并且由于这两个容器需要额外的指针域, 因此与vector, deque, array相比, 内存利用率较低.&emsp;&emsp;deque是一种更加复杂的数据结构. 与string和vector类似, deque支持快速随机访问. 与string和vector一样, 在deque的中间位置添加/删除元素代价(可能)很高, 但是在两端进行插入和删除都是很快的, 速度与lisy和forward_lis添加和删除元素速度相当.]]></content>
