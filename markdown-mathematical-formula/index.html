@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="在markdown里面插入数学公式, 首先需要选取MathJax引擎, 把以下代码插入md文件即可.1&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 如果使用he">
+<meta name="description" content="&amp;emsp;&amp;emsp;在markdown里面插入数学公式, 首先需要选取MathJax引擎, 把以下代码插入md文件即可.1&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&amp;quot;&amp;gt;&amp;lt;/scrip">
 <meta name="keywords" content="hexo, 神经网络, CNN, RNN, 深度学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown插入数学公式">
 <meta property="og:url" content="http://tcnull.github.io/markdown-mathematical-formula/index.html">
 <meta property="og:site_name" content="TC CODE HOME">
-<meta property="og:description" content="在markdown里面插入数学公式, 首先需要选取MathJax引擎, 把以下代码插入md文件即可.1&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 如果使用he">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;在markdown里面插入数学公式, 首先需要选取MathJax引擎, 把以下代码插入md文件即可.1&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&amp;quot;&amp;gt;&amp;lt;/scrip">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-12-29T08:26:35.188Z">
+<meta property="og:updated_time" content="2019-12-29T08:43:40.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown插入数学公式">
-<meta name="twitter:description" content="在markdown里面插入数学公式, 首先需要选取MathJax引擎, 把以下代码插入md文件即可.1&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 如果使用he">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;在markdown里面插入数学公式, 首先需要选取MathJax引擎, 把以下代码插入md文件即可.1&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&amp;quot;&amp;gt;&amp;lt;/scrip">
 
 
 
@@ -356,12 +356,45 @@
       
 
       
-        <p>在markdown里面插入数学公式, 首先需要选取MathJax引擎, 把以下代码插入md文件即可.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-<p>如果使用hexo之类的框架可以手动配置Mathjax引擎,这样就不需要每次都插入这一行代码.</p>
+        <p>&emsp;&emsp;在markdown里面插入数学公式, 首先需要选取MathJax引擎, 把以下代码插入md文件即可.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;如果使用hexo之类的框架可以手动配置Mathjax引擎,这样就不需要每次都插入这一行代码.</p>
 <h2 id="插入方式"><a href="#插入方式" class="headerlink" title="插入方式"></a>插入方式</h2><p><strong>行内插入</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\(a + b\)</span><br></pre></td></tr></table></figure></p>
-<p>因为是在行内插入, 因此需要’\\’进行转义, 告诉引擎这是公式的’(‘而不是文本的’(‘. 当然还有另外一种方式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$a + b$</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;因为是在行内插入, 因此需要’\\’进行转义, 告诉引擎这是公式的’(‘而不是文本的’(‘. 当然还有另外一种方式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$a + b$</span><br></pre></td></tr></table></figure></p>
 <p>(a + b)<br><strong>换行插入</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$a + b$$</span><br></pre></td></tr></table></figure></p>
-<script type="math/tex; mode=display">a + b</script>
+<script type="math/tex; mode=display">a + b</script><h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$x_1$, $x^2$, $x_1^2$, $x^2_1$, $x_&#123;22&#125;^&#123;(n)&#125;$, $&#123;&#125;^*x^*$</span><br></pre></td></tr></table></figure>
+<p>$x_1$, $x^2$, $x_1^2$, $x^2_1$, $x_{22}^{(n)}$, ${}^<em>x^</em>$</p>
+<h2 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\frac&#123;x+y&#125;&#123;2&#125;$, $\frac&#123;1&#125;&#123;1+\frac&#123;1&#125;&#123;2&#125;&#125;$</span><br></pre></td></tr></table></figure>
+<p>$\frac{x+y}{2}$, $\frac{1}{1+\frac{1}{2}}$</p>
+<h2 id="根式"><a href="#根式" class="headerlink" title="根式"></a>根式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\sqrt&#123;2&#125;&lt;\sqrt[3]&#123;27&#125;$, $\sqrt&#123;1+\sqrt[p]&#123;1+a^2&#125;&#125;$</span><br></pre></td></tr></table></figure>
+<p>$\sqrt{2}&lt;\sqrt[3]{27}$, $\sqrt{1+\sqrt[p]{1+a^2}}$</p>
+<h2 id="积分和求和"><a href="#积分和求和" class="headerlink" title="积分和求和"></a>积分和求和</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\sum_&#123;k=1&#125;^&#123;n&#125;\frac&#123;1&#125;&#123;k&#125;$, $\int_a^b f(x)dx$</span><br></pre></td></tr></table></figure>
+<p>$\sum_{k=1}^{n}\frac{1}{k}$, $\int_a^b f(x)dx$</p>
+<h2 id="常用希腊字母"><a href="#常用希腊字母" class="headerlink" title="常用希腊字母"></a>常用希腊字母</h2><script type="math/tex; mode=display">
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+{\alpha} & {\backslash alpha} & {\theta} & {\backslash theta} & {o} & {o} & {\upsilon} & {\backslash upsilon} \\\\
+\hline
+{\beta} & {\backslash beta} & {\vartheta} & {\backslash vartheta} & {\pi} & {\backslash pi} & {\phi} & {\backslash phi} \\\\
+\hline
+{\gamma} & {\backslash gamma} & {\iota} & {\backslash iota} & {\varpi} & {\backslash varpi} & {\varphi} & {\backslash varphi} \\\\
+\hline
+{\delta} & {\backslash delta} & {\kappa} & {\backslash kappa} & {\rho} & {\backslash rho} & {\chi} & {\backslash chi} \\\\
+\hline
+{\epsilon} & {\backslash epsilon} & {\lambda} & {\backslash lambda} & {\varrho} & {\backslash varrho} & {\psi} & {\backslash psi} \\\\
+\hline
+{\varepsilon} & {\backslash varepsilon} & {\mu} & {\backslash mu} & {\sigma} & {\backslash sigma} & {\omega} & {\backslash omega} \\\\
+\hline
+{\zeta} & {\backslash zeta} & {\nu} & {\backslash nu} & {\varsigma} & {\backslash varsigma} & {} & {} \\\\
+\hline
+{\eta} & {\backslash eta} & {\xi} & {\backslash xi} & {\tau} & {\backslash tau} & {} & {} \\\\
+\hline
+{\Gamma} & {\backslash Gamma} & {\Lambda} & {\backslash Lambda} & {\Sigma} & {\backslash Sigma} & {\Psi} & {\backslash Psi} \\\\
+\hline
+{\Delta} & {\backslash Delta} & {\Xi} & {\backslash Xi} & {\Upsilon} & {\backslash Upsilon} & {\Omega} & {\backslash Omega} \\\\
+\hline
+{\Omega} & {\backslash Omega} & {\Pi} & {\backslash Pi} & {\Phi} & {\backslash Phi} & {} & {} \\\\
+\hline
+\end{array}</script>
       
     </div>
     
@@ -583,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#插入方式"><span class="nav-number">1.</span> <span class="nav-text">插入方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#插入方式"><span class="nav-number">1.</span> <span class="nav-text">插入方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上下标"><span class="nav-number">2.</span> <span class="nav-text">上下标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分式"><span class="nav-number">3.</span> <span class="nav-text">分式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根式"><span class="nav-number">4.</span> <span class="nav-text">根式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#积分和求和"><span class="nav-number">5.</span> <span class="nav-text">积分和求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用希腊字母"><span class="nav-number">6.</span> <span class="nav-text">常用希腊字母</span></a></li></ol></div>
             
 
           </div>
