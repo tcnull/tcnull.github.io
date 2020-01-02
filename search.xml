@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[leetcode 25.Reverse Nodes in k Group]]></title>
+    <url>%2Fleetcode-25-Reverse-Nodes-in-k-Group%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;Given a linked list, reverse the nodes of a linked list k at a time and return its modified list. k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is. &emsp;&emsp;Example: Given this linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5 For k = 2, you should return: 2-&gt;1-&gt;4-&gt;3-&gt;5 For k = 3, you should return: 3-&gt;2-&gt;1-&gt;4-&gt;5 Note: Only constant extra memory is allowed.You may not alter the values in the list’s nodes, only nodes itself may be changed. 来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/reverse-nodes-in-k-group著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。 C++:12345678910111213141516171819202122232425262728293031323334353637383940/** * Definition for singly-linked list. * struct ListNode &#123; * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) &#123;&#125; * &#125;; */class Solution &#123;public: ListNode* reverseKGroup(ListNode* head, int k) &#123; ListNode* cur = head; return reverse(head, cur, k); &#125; ListNode* reverse(ListNode* head, ListNode* cur, int k)&#123; ListNode* tmp = cur; int count = 0; while(tmp)&#123; tmp = tmp -&gt; next; count++; &#125; if(count &lt; k) return head; ListNode* next = NULL; ListNode* pre = NULL; int n = k; while(cur &amp;&amp; n-- &gt; 0)&#123; next = cur -&gt; next; cur -&gt; next = pre; pre = cur; cur = next; &#125; head -&gt; next = reverse(cur, cur, k); return pre; &#125;&#125;;]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+        <tag>leetcode</tag>
+        <tag>递归</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[leetcode 24.Swap Nodes in Pairs]]></title>
     <url>%2FLeetCode-24-Swap-Nodes-in-Pairs%2F</url>
     <content type="text"><![CDATA[&emsp;&emsp;Given a linked list, swap every two adjacent nodes and return its head. You may not modify the values in the list’s nodes, only nodes itself may be changed. &emsp;&emsp;Example: Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3. 来源：力扣（LeetCode）链接：https://leetcode-cn.com/problems/swap-nodes-in-pairs著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。 想要采用递归解法, 首先思考这几个问题:1) 原始问题能否划分为若干个相同的子问题2) 递归的结束条件是什么3) 递归的调用条件 对于本题:子问题: 需要两两一组地将链表反转, 可以将原问题划分为简单的若干子问题(绿框), 每个子问题的操作就是仅有的两个结点反转, 修改指针即可(蓝线).结束条件: 当子问题中不足两个结点时, 无法完成反转, 此时递归跳出.调用条件: 需要将各个子问题中反转的链表连接起来, 对于每个子问题的头节点, 在反转之后变成尾结点, 即第一个子问题的尾结点需要指向下一个子问题的头节点(红线), 即递归调用的结果. C++:1234567891011121314151617181920/** * Definition for singly-linked list. * struct ListNode &#123; * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) &#123;&#125; * &#125;; */class Solution &#123;public: ListNode* swapPairs(ListNode* head) &#123; if(head == NULL || head -&gt; next == NULL)&#123; return head; &#125; ListNode *next = head -&gt; next; head -&gt; next = swapPairs(next -&gt; next); next -&gt; next = head; return next; &#125;&#125;;]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
       <tags>
-        <tag>LeetCode</tag>
+        <tag>链表</tag>
+        <tag>leetcode</tag>
         <tag>递归</tag>
       </tags>
   </entry>
